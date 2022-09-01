@@ -34,8 +34,7 @@ Much time I have started learning different programming languages when I have be
 * Postman, creating plain autotest scripts [Link](https://github.com/MihailMatveichuk/Postman "Postman")
 ## Code example:
 ---
-**Task from Codewars (Let's Recycle!):**
-```   
+**Task from Codewars (Let's Recycle!):** 
     function recycle(array) {
         let obj = {
             'paper': [],
@@ -51,7 +50,6 @@ Much time I have started learning different programming languages when I have be
             }
     });
     return Object.values(obj);}
-```    
 ## Experience:
 ---
 * Lead engineer of OJSC "AGAT - Electromechanical Plant, 2020 - 2022;
