@@ -16,7 +16,6 @@ Hello! My name is Mikhail. I work as a lead product engineer in the plant. I wan
 * working with design, technological and programming documentation.
 
 Much time I have started learning different programming languages when I have been student, ve been studing in Master's degree course and then. But only for 3 month as I have realised that JS is a more suitable and more understandable language for me. I am held much time for learning and programming, because changing of my currently job is my main goal! I will be so appreciative if I can become a part of large programming family!
----
 
 **My soft skills:**
 * highly motivated;
@@ -24,6 +23,7 @@ Much time I have started learning different programming languages when I have be
 * enhanced responsibility;
 * attention to details;
 * team player.
+---
 
 ## Skills and Proficiency:
 * HTML5, CSS3 [Link](https://drive.google.com/file/d/1Qw2o7ateIVVRPdfU1nnIF9-nSVgoj8iA/view?usp=sharing "HTML, CSS certificate")
