@@ -28,7 +28,7 @@ Much time I have started learning different programming languages when I have be
 ## Skills and Proficiency:
 ---
 * HTML5, CSS3 [Link](https://drive.google.com/file/d/1Qw2o7ateIVVRPdfU1nnIF9-nSVgoj8iA/view?usp=sharing "HTML, CSS certificate")
-* JavaScript Basics [Link](https://www.sololearn.com/Certificate/CT-GZMTVXFC/pngS "JavaScript ")
+* JavaScript Basics [Link](https://www.sololearn.com/Certificate/CT-GZMTVXFC/png "JavaScript ")
 * Git, GitHub [Link](https://github.com/MihailMatveichuk/Git/tree/main/HW1 "Git")
 * VS Code, DevTools 
 * Postman, creating plain autotest scripts [Link](https://github.com/MihailMatveichuk/Postman "Postman")
