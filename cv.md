@@ -5,6 +5,7 @@
 ---
 ## Contact information:
 ### tel: +375293845039
+### Discord: Mikhail (@MihailMatveichuk)
 ### E-mail: [mihkailmatveichuk@gmail.com](mihkailmatveichuk@gmail.com)
 ### LinkedIn: [www.linkedin.com/in/mikhailmatveichuk](mihkailmatveichuk@gmail.com)
 ### Skype: [live:.cid.a99a9a51dadd0b29](live:.cid.a99a9a51dadd0b29)
