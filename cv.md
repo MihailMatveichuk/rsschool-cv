@@ -12,7 +12,7 @@
 ---
 ## About me:
 Hello! My name is Mikhail. I work as a lead product engineer in the plant. I want to discribe my some major responsibilities of my current job:<br/>
-* work with requirements (review, changing and improvement) ;
+* work with requirements (review, changing and improvement);
 * quality control of products at all stages of its life cycle according to International and State standards;
 * working with design, technological and programming documentation.
 
@@ -69,7 +69,7 @@ return Object.values(obj);}
 ## Languages:
 * English - B1 [EF SET Score](https://www.efset.org/cert/Yy1Pa8);<br/> 
 ![EFSET CERTIFICATE](Certificate.png)
-* Russian - Native
+* Russian - Native.
 
 ---
 
