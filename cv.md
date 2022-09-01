@@ -1,6 +1,5 @@
 # Mikhail Matveichuk
 ![CV_Photo](foto.jpg)
-
 ## Junior Frontend Developer
 ---
 ## Contact information:
@@ -9,7 +8,6 @@
 ### E-mail: [mihkailmatveichuk@gmail.com](mihkailmatveichuk@gmail.com)
 ### LinkedIn: [www.linkedin.com/in/mikhailmatveichuk](mihkailmatveichuk@gmail.com)
 ### Skype: [live:.cid.a99a9a51dadd0b29](live:.cid.a99a9a51dadd0b29)
-
 ## About me:
 ---
 Hello! My name is Mikhail. I work as a lead product engineer in the plant. I want to discribe my some major responsibilities of my current job:<br/>
@@ -25,7 +23,6 @@ Much time I have started learning different programming languages when I have be
 * enhanced responsibility;
 * attention to details;
 * team player.
-
 ## Skills and Proficiency:
 ---
 * HTML5, CSS3 [Link](https://drive.google.com/file/d/1Qw2o7ateIVVRPdfU1nnIF9-nSVgoj8iA/view?usp=sharing "HTML, CSS certificate")
@@ -33,7 +30,6 @@ Much time I have started learning different programming languages when I have be
 * Git, GitHub [Link](https://github.com/MihailMatveichuk/Git/tree/main/HW1 "Git")
 * VS Code, DevTools 
 * Postman, creating plain autotest scripts [Link](https://github.com/MihailMatveichuk/Postman "Postman")
-
 ## Code example:
 ---
 **Task from Codewars (Let's Recycle!):** 
@@ -52,18 +48,15 @@ Much time I have started learning different programming languages when I have be
             }
     });
     return Object.values(obj);}
-
 ## Experience:
 ---
 * Lead engineer of OJSC "AGAT - Electromechanical Plant, 2020 - 2022;
 * Engineer of Military Academy Republic of Belarus, 2015 - 2020.
-
 ## Education:
 ---
 * Military academy Republic of Belarus,
   Master of Engineering - MEng,
   2010 - 2017
-
 ## Languages:
 ---
 * English - B1 [EF SET Score](https://www.efset.org/cert/Yy1Pa8);<br/> 
