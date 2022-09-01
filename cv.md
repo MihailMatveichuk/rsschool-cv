@@ -4,11 +4,11 @@
 
 ---
 ## Contact information:
-**tel**: +375293845039
-**Discord**: Mikhail(@MihailMatveichuk)
-**E-mail**: mihkailmatveichuk@gmail.com
-**Telegram**: @fletcher1991
-**LinkedIn**: [www.linkedin.com/in/mikhailmatveichuk](mihkailmatveichuk@gmail.com)
+**tel**: +375293845039<br/>
+**Discord**: Mikhail(@MihailMatveichuk)<br/>
+**E-mail**: mihkailmatveichuk@gmail.com<br/>
+**Telegram**: @fletcher1991<br/>
+**LinkedIn**: [www.linkedin.com/in/mikhailmatveichuk](mihkailmatveichuk@gmail.com)<br/>
 **Skype**: live:.cid.a99a9a51dadd0b29
 
 ---
