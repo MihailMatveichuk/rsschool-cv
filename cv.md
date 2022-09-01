@@ -13,10 +13,7 @@ Hello! My name is Mikhail. I work as a lead product engineer in the plant. I wan
 * work with requirements (review, changing and improvement) ;
 * quality control of products at all stages of its life cycle according to International and State standards;
 * working with design, technological and programming documentation.<br/>
-Much time I have started learning different programming languages when I have been student, <br/>  
-I have been studing in Master's degree course and then. But only for 3 month as I have realised that JS is a more suitable and more understandable language for me. <br/> 
-I am held much time for learning and programming, because changing of my currently job is my <br/> main goal! 
-I will be so appreciative if I can become a part of large programming family!<br/>
+Much time I have started learning different programming languages when I have been student, ve been studing in Master's degree course and then. But only for 3 month as I have realised that JS is a more suitable and more understandable language for me. I am held much time for learning and programming, because changing of my currently job is my main goal! I will be so appreciative if I can become a part of large programming family!<br/>
 ### My soft skills:
 * highly motivated;
 * hardworking person;
@@ -32,12 +29,17 @@ I will be so appreciative if I can become a part of large programming family!<br
 * Postman, creating plain autotest scripts [Link](https://github.com/MihailMatveichuk/Postman "Postman")
 ---
 ## Education:
-Military academy Republic of Belarus<br/>
+* Military academy Republic of Belarus,
 Master of Engineering - MEng
+---
+## Education:
+* Military academy Republic of Belarus,
+  Master of Engineering - MEng,
+  2010 - 2017
 ---
 ## Code example:
 *Task from Codewars (Let's Recycle!):*
-    function recycle(array) {
+    <function recycle(array) {
         let obj = {
             'paper': [],
             'glass': [],
@@ -51,20 +53,16 @@ Master of Engineering - MEng
                 }
             }
     });
-    return Object.values(obj);}
+    return Object.values(obj);}>
 ---
-## Education:
-* Military academy Republic of Belarus,<br/>
-  Master of Engineering - MEng,<br/>
-  2010 - 2017
-  ---
+
 ## Experience:
 * Lead engineer of OJSC "AGAT - Electromechanical Plant, 2020 - 2022;
 * Engineer of Military Academy Republic of Belarus, 2015 - 2020.
 ---
 ## Languages:
 * English - B1<br/> 
-![EFSET CERTIFICATE](https://www.efset.org/cert/bZNfHC)
+![EFSET CERTIFICATE](certificate_51.png)
 * Russian - Native
  
 
