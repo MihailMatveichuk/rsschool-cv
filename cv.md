@@ -17,7 +17,7 @@ Hello! My name is Mikhail. I work as a lead product engineer in the plant. I wan
 
 Much time I have started learning different programming languages when I have been student, ve been studing in Master's degree course and then. But only for 3 month as I have realised that JS is a more suitable and more understandable language for me. I am held much time for learning and programming, because changing of my currently job is my main goal! I will be so appreciative if I can become a part of large programming family!
 
-** My soft skills:**
+**My soft skills:**
 * highly motivated;
 * hardworking person;
 * enhanced responsibility;
@@ -33,21 +33,23 @@ Much time I have started learning different programming languages when I have be
 ## Code example:
 ---
 **Task from Codewars (Let's Recycle!):** 
-    function recycle(array) {
-        let obj = {
-            'paper': [],
-            'glass': [],
-            'organic': [],
-            'plastic': []
-        };
-        array.forEach(element => {
-            for (let val of Object.keys(obj)) {
-                if (element.material == val || element.secondMaterial == val) {
-                    obj[val].push(element.type);
-                }
+```
+function recycle(array) {
+    let obj = {
+        'paper': [],
+        'glass': [],
+        'organic': [],
+        'plastic': []
+    };
+    array.forEach(element => {
+        for (let val of Object.keys(obj)) {
+            if (element.material == val || element.secondMaterial == val) {
+                obj[val].push(element.type);
             }
-    });
-    return Object.values(obj);}
+        }
+});
+return Object.values(obj);}
+```
 ## Experience:
 ---
 * Lead engineer of OJSC "AGAT - Electromechanical Plant, 2020 - 2022;
