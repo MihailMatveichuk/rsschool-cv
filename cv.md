@@ -1,34 +1,71 @@
-![Mikhail Matveichuk](https://drive.google.com/file/d/1PTnhNVbeB_e83hVEXJEJru9SeHVbE2hS/view?usp=sharing)
 # Mihail Matveichuk
+## Junior Frontend Developer
 ---
+## Contact information:
 
-
-## tel: +375293845039
-## E-mail: mihkailmatveichuk@gmail.com
-## LinkedIn: www.linkedin.com/in/mikhailmatveichuk
-## Skype: live:.cid.a99a9a51dadd0b29
-
-### Hello! My name is Mikhail. I work as a lead product engineer. 
-### I want to discribe my some major responsibilities of my current job:
+### tel: +375293845039
+### E-mail: mihkailmatveichuk@gmail.com
+### LinkedIn: www.linkedin.com/in/mikhailmatveichuk
+### Skype: live:.cid.a99a9a51dadd0b29
+---
+## About me:
+Hello! My name is Mikhail. I work as a lead product engineer in the plant. I want to discribe my some major responsibilities of my current job:<br/>
 * work with requirements (review, changing and improvement) ;
 * quality control of products at all stages of its life cycle according to International and State standards;
-* working with design, technological and programming documentation.
-
+* working with design, technological and programming documentation.<br/>
+Much time I have started learning different programming languages when I have been student, <br/>  
+I have been studing in Master's degree course and then. But only for 3 month as I have realised that JS is a more suitable and more understandable language for me. <br/> 
+I am held much time for learning and programming, because changing of my currently job is my <br/> main goal! 
+I will be so appreciative if I can become a part of large programming family!<br/>
 ### My soft skills:
 * highly motivated;
+* hardworking person;
 * enhanced responsibility;
 * attention to details;
 * team player.
-
-### I am so passionate about learning programming and improving my technical skills.
-### I am really a hardworking person with high ambitions and aims.
-### I like finding out a new information and soak it.
-
+---
+## Skills and Proficiency:
+* HTML5, CSS3 [Link](https://drive.google.com/file/d/1Qw2o7ateIVVRPdfU1nnIF9-nSVgoj8iA/view?usp=sharing "HTML, CSS certificate")
+* JavaScript Basics [Link](https://www.sololearn.com/Certificate/CT-GZMTVXFC/pngS "JavaScript ")
+* Git, GitHub [Link](https://github.com/MihailMatveichuk/Git/tree/main/HW1 "Git")
+* VS Code, DevTools 
+* Postman, creating plain autotest scripts [Link](https://github.com/MihailMatveichuk/Postman "Postman")
+---
 ## Education:
-* 
+Military academy Republic of Belarus<br/>
+Master of Engineering - MEng
+---
+## Code example:
+*Task from Codewars (Let's Recycle!):*
+    function recycle(array) {
+        let obj = {
+            'paper': [],
+            'glass': [],
+            'organic': [],
+            'plastic': []
+        };
+        array.forEach(element => {
+            for (let val of Object.keys(obj)) {
+                if (element.material == val || element.secondMaterial == val) {
+                    obj[val].push(element.type);
+                }
+            }
+    });
+    return Object.values(obj);}
+---
+## Education:
+* Military academy Republic of Belarus,<br/>
+  Master of Engineering - MEng,<br/>
+  2010 - 2017
+  ---
 ## Experience:
-
-* Engineer of Military Academy Republic of Belarus, 2015 - 2022
-
+* Lead engineer of OJSC "AGAT - Electromechanical Plant, 2020 - 2022;
+* Engineer of Military Academy Republic of Belarus, 2015 - 2020.
+---
+## Languages:
+* English - B1<br/> 
+![EFSET CERTIFICATE](https://www.efset.org/cert/bZNfHC)
+* Russian - Native
+ 
 
 
