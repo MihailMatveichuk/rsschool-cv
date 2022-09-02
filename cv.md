@@ -1,5 +1,5 @@
 # Mikhail Matveichuk
-![CV_Photo](/images/foto.jpg)
+![CV_Photo](./images/foto.jpg)
 ## Junior Frontend Developer
 
 ---
@@ -70,7 +70,7 @@ return Object.values(obj);}
 ---
 ## Languages:
 * English - B1 [EF SET Score](https://www.efset.org/cert/Yy1Pa8);<br/> 
-![EFSET CERTIFICATE](/images/Certificate.png)
+![EFSET CERTIFICATE](./images/Certificate.png)
 * Russian - Native.
 
 ---

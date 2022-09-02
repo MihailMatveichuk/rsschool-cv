@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto-Light.ttf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/fonts/Roboto-Regular.ttf");
+    font-weight: 300;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+h1 {
+    font-weight: 300;
+}
+
+.header {
+    background-color: bisque;
+    height: 200px;
+}
+
+.foto {
+    padding-left: 15px;
+    padding-top: 10px;
+}
