@@ -1,5 +1,5 @@
 # Mikhail Matveichuk
-![CV_Photo](./images/foto.jpg)
+![CV_Photo](./assets/images/foto_circle.png)
 ## Junior Frontend Developer
 
 ---
@@ -13,12 +13,12 @@
 
 ---
 ## About me:
-Hello! My name is Mikhail. I work as a lead product engineer in the plant. I want to discribe my some major responsibilities of my current job:<br/>
+Hello! My name is Mikhail. I work as a lead product engineer in the plant. I want to describe my some major responsibilities of my current job:<br/>
 * work with requirements (review, changing and improvement);
 * quality control of products at all stages of its life cycle according to International and State standards;
 * working with design, technological and programming documentation.
 
-Much time I have started learning different programming languages when I have been student, ve been studing in Master's degree course and then. But only for 3 month as I have realised that JS is a more suitable and more understandable language for me. I am held much time for learning and programming, because changing of my currently job is my main goal! I will be so appreciative if I can become a part of large programming family!
+Much time I have started learning different programming languages when I have been student, ve been studying in Master's degree course and then. But only for 3 month as I have realised that JS is a more suitable and more understandable language for me. I am held much time for learning and programming, because changing of my currently job is my main goal! I will be so appreciative if I can become a part of large programming family!
 
 **My soft skills:**
 * highly motivated;
@@ -70,7 +70,7 @@ return Object.values(obj);}
 ---
 ## Languages:
 * English - B1 [EF SET Score](https://www.efset.org/cert/Yy1Pa8);<br/> 
-![EFSET CERTIFICATE](./images/Certificate.png)
+![EFSET CERTIFICATE](./assets/images/Certificate.png)
 * Russian - Native.
 
 ---
