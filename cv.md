@@ -1,5 +1,5 @@
 # Mikhail Matveichuk
-![CV_Photo](/images/foto.jpg)
+![CV_Photo](/images/foto_circle.png)
 ## Junior Frontend Developer
 
 ---
