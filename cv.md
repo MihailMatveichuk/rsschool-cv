@@ -8,7 +8,7 @@
 **Discord**: Mikhail(@MihailMatveichuk)<br/>
 **E-mail**: mihkailmatveichuk@gmail.com<br/>
 **Telegram**: @fletcher1991<br/>
-**LinkedIn**: [https://www.linkedin.com/notifications/](mihkailmatveichuk@gmail.com)<br/>
+**LinkedIn**: [www.linkedin.com/in/mikhailmatveichuk/](https://www.linkedin.com/in/mikhailmatveichuk/)<br/>
 **Skype**: live:.cid.a99a9a51dadd0b29
 
 ---
