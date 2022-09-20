@@ -1,24 +1,24 @@
 @font-face {
     font-family: 'Roboto';
-    src: url("assets/font/Roboto-Light.ttf");
+    src: url("/assets/fonts/Roboto-Light.ttf");
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("assets/font/Roboto-Regular.ttf");
+    src: url("/assets/fonts/Roboto-Regular.ttf");
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("assets/font/Roboto-Medium.ttf");
+    src: url("/assets/fonts/Roboto-Medium.ttf");
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("assets/font/Roboto-Bold.ttf");
+    src: url("assets/fonts/Roboto-Bold.ttf");
     font-weight: 700;
 }
 
@@ -26,8 +26,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Roboto', sans-serif;
 }
 
 .dekstop_petstory {
@@ -76,6 +74,8 @@
 .logo-text {
     width: 72.49px;
     height: 44.91px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 19.0145px;
     line-height: 130%;
@@ -88,6 +88,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
@@ -97,7 +99,7 @@
 .map,
 .zoos,
 .donate,
-.class {
+.contact {
     margin: 29px 58px 29px 0px;
 }
 
@@ -110,16 +112,29 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
 }
 
 .design {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
     margin: 29px 220px 29px 380px;
 }
 
-.nav_item a {
+.about,
+.map,
+.zoos,
+.donate,
+.contact {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
@@ -147,6 +162,8 @@
     position: absolute;
     width: 500.31px;
     height: 400px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 106.496px;
     line-height: 75%;
@@ -167,6 +184,8 @@
     border: 0;
     width: 298px;
     height: 54px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
@@ -213,6 +232,8 @@
 .section2_title {
     width: 465px;
     height: 116px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 48px;
     line-height: 120%;
@@ -222,6 +243,8 @@
 .section2_text-first {
     margin-top: 20px;
     height: 42px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
@@ -232,6 +255,8 @@
     margin-top: 54px;
     width: 217px;
     height: 29px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 120%;
@@ -241,6 +266,8 @@
 .section2_text-second {
     margin-top: 34px;
     height: 105px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
@@ -277,25 +304,35 @@
 .foto-card_img {
     width: 366px;
     height: 366px;
-    padding: 0px;
+}
+
+.foto-card_logo_meat {
+    width: 48px;
+    height: 38px;
+    margin: 8px 8px 14px 0px;
+}
+
+.foto-card_logo_banana{
+    width: 33px;
+    height: 37px;
+    margin: 10px 12px 13px 11px;
 }
 
 .foto-card_footer {
     display: flex;
     flex-direction: row;
-    margin: 8px 56px 14px 16px;
-    border: black solid 1px;
 }
 
 .foto-card_text {
     width: 294px;
-    display: flex;
-    flex-direction: column;
+    margin: 8px 0px 14px 16px;
 }
 
 .foto-card_title {
     width: 294px;
     height: 22px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 140%;
@@ -305,17 +342,13 @@
 
 .foto-card_disc {
     width: 294px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    font-style: normal;
     font-size: 15px;
     line-height: 120%;
     color: #000000;
-}
-
-.foto-card_logo {
-    width: 42.98px;
-    height: 29.39px;
-    margin: 12.55px 10.16px 16.06px 0px;
-    border: #F9804B solid 2px;
 }
 
 .flowers {
@@ -355,13 +388,13 @@
     justify-content: space-between;
 }
 
-.section3_lower-btn {
+.section3_lower-btn{
     background: #FE9013;
     border-radius: 25px;
     width: 298px;
     height: 54px;
-    font-family: 'Roboto';
-    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
@@ -380,4 +413,151 @@
 
 .palm {
     margin-top: -220px;
+}
+
+.section4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1004px;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    opacity: 0.9;
+}
+
+.pick-feed{
+    display: flex;
+    flex-direction: column;
+    width: 1160px;
+    height: 835px;
+    margin: 69px 220px 100px 220px;
+    background: rgba(253, 253, 255, 0.52);
+    border-radius: 20px;
+}
+.section4_title{
+    width: 467px;
+    height: 58px;
+    margin: 41px 347px 30px 350px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #FE9013;
+}
+.section4_title_moto{
+    width: 855px;
+    height: 29px;
+    margin: 0px 217px 40px 99px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333B41;
+}
+.section4_title_covid-text{
+    width: 1061px;
+    height: 21px;
+    margin: 0px 0px 10px 99px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333B41;
+}
+.section4_title_zoo{
+    width: 863px;
+    height: 42px;
+    margin: 0px 198px 60px 99px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333B41;
+}
+.section4_title_subtitle{
+    width: 209px;
+    height: 47px;
+    margin: 0px 476px 40px 475px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: #333B41;
+}
+
+.support{
+    color:#333B41;
+    text-underline-offset: 4px;
+    text-decoration: underline;
+    text-decoration-color: #FE9013;
+}
+.pick-feed_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+.pick-feed_card{
+    width: 168px;
+    height: 244px;
+}
+.pick-feed_icon{
+    box-sizing: border-box;
+    width: 168px;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: orange solid 1px;
+}
+.pick-feed_icon_zoo{
+    width: 85.77px;
+    height: 95px;
+}
+.pick-feed_icon_monkey{
+    width: 124.75px;
+    height: 71.6px;
+}
+
+.cartoon_arrow{
+    width: 69px;
+    height: 168.08px;
+    margin-left: 30px;
+    margin-right: 31px;
+}
+
+.pick-feed_card_text{
+    width: 168px;
+    height: 46px;
+    margin-top: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333B41;
+}
+
+.section4_lower-btn {
+    background: #FE9013;
+    border-radius: 25px;
+    width: 298px;
+    height: 54px;
+    margin: 60px 431px 59px 431px;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 0;
 }
