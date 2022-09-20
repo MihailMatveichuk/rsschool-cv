@@ -1,5 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto&display=swap');
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/font/Roboto-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/font/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/font/Roboto-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("assets/font/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -188,7 +210,7 @@
     margin-left: 87px;
 }
 
-.section2_text-first {
+.section2_title {
     width: 465px;
     height: 116px;
     font-weight: 400;
@@ -197,7 +219,7 @@
     color: #333B41;
 }
 
-.section2_text-second {
+.section2_text-first {
     margin-top: 20px;
     height: 42px;
     font-weight: 400;
@@ -206,7 +228,7 @@
     color: #333B41;
 }
 
-.section2_text-third {
+.section2_subtitle {
     margin-top: 54px;
     width: 217px;
     height: 29px;
@@ -216,21 +238,13 @@
     color: #333B41;
 }
 
-.section2_text-forth {
+.section2_text-second {
     margin-top: 34px;
     height: 105px;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
     color: #333B41;
-}
-
-.flowers {
-    width: 293px;
-    height: 605px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    margin-top: -128px;
-    margin-left: 20px;
 }
 
 .section3 {
@@ -250,43 +264,66 @@
     height: 872px;
 }
 
-.foto-card1,
-.foto-card2,
-.foto-card3,
-.foto-card4,
-.foto-card5,
-.foto-card6 {
+.foto-card {
+    display: flex;
+    flex-direction: column;
     width: 366px;
     height: 426px;
     border-radius: 5px;
     border: 1px solid #FA6F32;
-    row-gap: 30px;
-    column-gap: 20px;
     overflow: hidden;
+}
+
+.foto-card_img {
+    width: 366px;
+    height: 366px;
+    padding: 0px;
+}
+
+.foto-card_footer {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 56px 14px 16px;
+    border: black solid 1px;
+}
+
+.foto-card_text {
+    width: 294px;
+    display: flex;
+    flex-direction: column;
 }
 
 .foto-card_title {
     width: 294px;
     height: 22px;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     line-height: 140%;
     text-transform: uppercase;
     color: #000000;
-    padding-left: 16px;
 }
 
 .foto-card_disc {
-    font-family: 'Roboto';
-    font-style: normal;
+    width: 294px;
     font-weight: 300;
     font-size: 15px;
     line-height: 120%;
     color: #000000;
-    margin-left: 16px;
+}
+
+.foto-card_logo {
+    width: 42.98px;
+    height: 29.39px;
+    margin: 12.55px 10.16px 16.06px 0px;
+    border: #F9804B solid 2px;
+}
+
+.flowers {
+    width: 293px;
+    height: 605px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-top: -128px;
+    margin-left: 20px;
 }
 
 .circle_arrow1 {
