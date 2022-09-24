@@ -89,18 +89,6 @@
     text-decoration: none;
 }
 
-.main_item_list {
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-}
-
 .about,
 .map,
 .zoos,
@@ -119,6 +107,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    transition: 0.6s;
 }
 
 .design {
@@ -384,11 +373,13 @@
 }
 
 .circle_arrow1:active {
-    background: url(/assets/icons/arrow_elips_2_green.svg)
+    background: url(/assets/icons/arrow_elips_2_green.svg);
+    transition: 0.6s;
 }
 
 .circle_arrow2:active {
-    background-image: url(/assets/icons/arrow_elips_1_green.svg)
+    background-image: url(/assets/icons/arrow_elips_1_green.svg);
+    transition: 0.6s;
 }
 
 .section3_footer {
@@ -779,25 +770,38 @@
 }
 
 .footer_social_item:active .social-facebook {
-    background-image: url(/assets/icons/facebook_green.svg)
+    background-image: url(/assets/icons/facebook_green.svg);
+    transition: 0.6s;
 }
 
 .footer_social_item:active .social-twiter {
     background-image: url(/assets/icons/twiter_green.svg);
+    transition: 0.6s;
 }
 
 .footer_social_item:active .social-instagram {
     background-image: url(/assets/icons/instagra_green.svg);
+    transition: 0.6s;
 }
 
 .footer_social_item:active .social-youtube {
     background-image: url(/assets/icons/youtube_green.svg);
+    transition: 0.6s;
 }
 
 .footer_social_item:active .social-text {
     color: #4B9200;
+    transition: 0.6s;
 }
-
+input.email_input:focus{
+    outline: 0;
+    border: #4B9200 solid 1px;
+    transition: 0.6s;
+}
+input.email_input:focus::placeholder{
+    color: #4B9200;
+    transition: 0.6s;
+}
 .footer-second {
     margin: 371px 32px 50px 0px;
 }
@@ -845,11 +849,6 @@
     background: rgba( 0, 0, 0, 1);
     border: 1px solid #FA6F32;
 }
-
-
-/* .email_input:active {
-    border: 1px solid #4B9200;
-} */
 
 .email_button {
     width: 129px;
@@ -901,6 +900,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    transition: 0.6s;
 }
 
 .btn_header:hover,
