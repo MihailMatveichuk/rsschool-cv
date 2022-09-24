@@ -69,24 +69,34 @@
     margin: 14px 63px 14px 220px;
 }
 
-.logo-image {
+.logo-image{
     position: absolute;
-    margin: 23.64px 60.05px 5.79px 7.13px;
+    margin: 23.64px 0px 5.79px -28px;
     z-index: 2;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
     z-index: 1;
 }
 
+
 .logo-text {
-    width: 72.49px;
-    height: 44.91px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 19.0145px;
+    font-size: 19px;
     line-height: 130%;
     color: #FFFFFF;
+}
+.main_logo{
     text-decoration: none;
+}
+
+.about,.about-footer{
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    pointer-events: none;
 }
 
 .about,
@@ -97,7 +107,6 @@
     margin: 29px 58px 29px 0px;
 }
 
-.about:active,
 .map:active,
 .zoos:active,
 .donate:active,
@@ -343,6 +352,22 @@
     line-height: 120%;
     color: #000000;
 }
+.foto-card:hover .foto-card_text{
+    padding-left: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    transform: scale(1.5);
+    transition: .5s;
+    background: rgba( 0, 0, 0, 0.3)
+}
+.foto-card:hover .foto-card_img{
+    text-align: center;
+    transform: scale(1.03);
+    transition: .8s;
+    background: rgba( 0, 0, 0, 0.3)
+}
+
 
 .flowers {
     width: 293px;
@@ -729,6 +754,23 @@
     border: 1.18841px solid #FFFFFF;
     margin-bottom: 68px;
 }
+.logo-text_footer{
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 130%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo-image_footer {
+    position: absolute;
+    margin: 23.64px 60.05px 5.79px 7.13px;
+    z-index: 2;
+    transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
+    z-index: 1;
+}
 
 .footer_lower-btn {
     width: 298px;
@@ -892,7 +934,6 @@ input.email_input:focus::placeholder{
     text-decoration: none;
 }
 
-.about-footer:active,
 .map-footer:active,
 .zoos-footer:active,
 .contact-footer:active {

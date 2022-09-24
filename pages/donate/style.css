@@ -69,25 +69,27 @@
     margin: 14px 63px 14px 220px;
 }
 
-.logo-image {
+.logo-image{
     position: absolute;
-    margin: 23.64px 60.05px 5.79px 7.13px;
+    margin: 23.64px 0px 5.79px -28px;
     z-index: 2;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
     z-index: 1;
 }
 
+
 .logo-text {
-    width: 72.49px;
-    height: 44.91px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 19.0145px;
+    font-size: 19px;
     line-height: 130%;
     color: #FFFFFF;
+}
+.main_logo{
     text-decoration: none;
 }
+
 
 .about,
 .map,
@@ -359,6 +361,13 @@ input.charity_input:focus::placeholder{
 input.charity_input:focus ~ .charity-form_mark{
     content: url(/assets/icons/mark_green.svg);
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .charity_input{
     width: 268px;
     height: 54px;
@@ -460,6 +469,23 @@ input.charity_input:focus ~ .charity-form_mark{
     text-align: center;
     border: 1.18841px solid #FFFFFF;
     margin-bottom: 68px;
+}
+.logo-text_footer{
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 130%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.logo-image_footer {
+    position: absolute;
+    margin: 23.64px 60.05px 5.79px 7.13px;
+    z-index: 2;
+    transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
+    z-index: 1;
 }
 
 .footer_lower-btn {
