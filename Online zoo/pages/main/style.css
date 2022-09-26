@@ -1,30 +1,30 @@
 @font-face {
     font-family: 'Roboto';
-    src: url("/assets/fonts/Roboto-Thin.ttf");
+    src: url("/Online zoo/assets/fonts/Roboto-Thin.ttf");
     font-weight: 100;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("/assets/fonts/Roboto-Light.ttf");
+    src: url("/Online zoo/assets/fonts/Roboto-Light.ttf");
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("/assets/fonts/Roboto-Regular.ttf");
+    src: url("/Online zoo/assets/fonts/Roboto-Regular.ttf");
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("/assets/fonts/Roboto-Medium.ttf");
+    src: url("/Online zoo/assets/fonts/Roboto-Medium.ttf");
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("assets/fonts/Roboto-Bold.ttf");
+    src: url("/Online zoo/assets/fonts/Roboto-Bold.ttf");
     font-weight: 700;
 }
 
@@ -43,7 +43,7 @@
 
 .section1_ft {
     height: 780px;
-    background: url(/assets/images/Giant_Panda.png);
+    background: url('/Online zoo/assets/images/Giant_Panda.png');
 }
 
 .nav {
@@ -388,7 +388,7 @@
     margin-right: 20px;
     border: 0;
     border-radius: 50px;
-    background: url(/assets/icons/arrow_elips_1.svg);
+    background: url('/Online zoo/assets/icons/arrow_elips_1.svg');
     cursor: pointer;
 }
 
@@ -399,17 +399,17 @@
     margin-left: 20px;
     border: 0;
     border-radius: 50px;
-    background: url(/assets/icons/arrow_elips_2.svg);
+    background: url('/Online zoo/assets/icons/arrow_elips_2.svg');
     cursor: pointer;
 }
 
 .circle_arrow1:active {
-    background: url(/assets/icons/arrow_elips_2_green.svg);
+    background: url('/Online zoo/assets/icons/arrow_elips_2_green.svg');
     transition: 0.6s;
 }
 
 .circle_arrow2:active {
-    background-image: url(/assets/icons/arrow_elips_1_green.svg);
+    background-image: url('/Online zoo/assets/icons/arrow_elips_1_green.svg');
     transition: 0.6s;
 }
 
@@ -824,22 +824,22 @@
 }
 
 .footer_social_item:active .social-facebook {
-    background-image: url(/assets/icons/facebook_green.svg);
+    background-image: url('/Online zoo/assets/icons/facebook_green.svg');
     transition: 0.6s;
 }
 
 .footer_social_item:active .social-twiter {
-    background-image: url(/assets/icons/twiter_green.svg);
+    background-image: url('/Online zoo/assets/icons/twiter_green.svg');
     transition: 0.6s;
 }
 
 .footer_social_item:active .social-instagram {
-    background-image: url(/assets/icons/instagra_green.svg);
+    background-image: url('/Online zoo/assets/icons/instagra_green.svg');
     transition: 0.6s;
 }
 
 .footer_social_item:active .social-youtube {
-    background-image: url(/assets/icons/youtube_green.svg);
+    background-image: url('/Online zoo/assets/icons/youtube_green.svg');
     transition: 0.6s;
 }
 
