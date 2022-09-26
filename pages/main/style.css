@@ -195,6 +195,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 546px 319px 100px 983px;
+    cursor: pointer;
 }
 
 .section2 {
@@ -301,6 +302,7 @@
     border-radius: 5px;
     border: 1px solid #FA6F32;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .foto-card_img {
@@ -384,7 +386,8 @@
     margin-right: 20px;
     border: 0;
     border-radius: 50px;
-    background: url(/assets/icons/arrow_elips_1.svg)
+    background: url(/assets/icons/arrow_elips_1.svg);
+    cursor: pointer;
 }
 
 .circle_arrow2 {
@@ -394,7 +397,8 @@
     margin-left: 20px;
     border: 0;
     border-radius: 50px;
-    background: url(/assets/icons/arrow_elips_2.svg)
+    background: url(/assets/icons/arrow_elips_2.svg);
+    cursor: pointer;
 }
 
 .circle_arrow1:active {
@@ -430,6 +434,7 @@
     color: #FFFFFF;
     margin-top: 86px;
     border: 0;
+    cursor: pointer;
 }
 
 .strelitzia {
@@ -597,6 +602,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     border: 0;
+    cursor: pointer;
 }
 
 .section5_comments {
@@ -693,6 +699,7 @@
     border-radius: 5px;
     border: #FEBDAB solid 0.5px;
     margin: 21px 501px 31px 500px;
+    cursor: pointer;
 }
 
 .row_filling {
@@ -722,6 +729,7 @@
     color: #FFFFFF;
     border: 0;
     margin: 0px 847px 0px 220px;
+    cursor: pointer;
 }
 
 .leav {
@@ -787,6 +795,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     border: 0;
+    cursor: pointer;
 }
 
 .footer_social {
@@ -835,14 +844,44 @@
     color: #4B9200;
     transition: 0.6s;
 }
-input.email_input:focus{
-    outline: 0;
-    border: #4B9200 solid 1px;
-    transition: 0.6s;
+
+input.email_input:valid{
+    border:#4B9200 solid 1px;
+    color:#4B9200; 
 }
-input.email_input:focus::placeholder{
-    color: #4B9200;
-    transition: 0.6s;
+
+input.email_input:valid + .email_button{
+    border:black solid 1px;
+    color:black;
+}
+
+input.email_input:invalid + .email_button{
+    border:#D31414 solid 1px;
+    color:#D31414;
+}
+input.email_input:valid + label {
+    opacity: 0;
+}
+input.email_input:invalid:not(:focus):not(:placeholder-shown) {
+    border:#D31414 solid 1px;
+    color:#D31414;
+}
+input.email_input:invalid:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0.5;
+}
+input.email_input:invalid:focus:not(:placeholder-shown) ~ 
+.requirements {
+        max-height: 200px;
+        padding: 0 30px 20px 50px;
+   }
+.requirements {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
 }
 .footer-second {
     margin: 371px 32px 50px 0px;
@@ -871,6 +910,8 @@ input.email_input:focus::placeholder{
 
 .email_form {
     margin-top: 14px;
+}
+.form_footer_email{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -897,14 +938,15 @@ input.email_input:focus::placeholder{
     height: 42px;
     box-sizing: border-box;
     background: #F1F3F2;
-    border: 1px solid #4B9200;
+    border: 1px solid black;
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 140%;
-    color: #4B9200;
+    line-height: 130%;
+    color: black;
+    cursor: pointer;
 }
 
 .footer_design-text {
