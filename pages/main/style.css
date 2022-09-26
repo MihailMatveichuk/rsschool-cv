@@ -69,14 +69,13 @@
     margin: 14px 63px 14px 220px;
 }
 
-.logo-image{
+.logo-image {
     position: absolute;
     margin: 23.64px 0px 5.79px -28px;
     z-index: 2;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
     z-index: 1;
 }
-
 
 .logo-text {
     font-family: 'Raleway', sans-serif;
@@ -86,11 +85,13 @@
     line-height: 130%;
     color: #FFFFFF;
 }
-.main_logo{
+
+.main_logo {
     text-decoration: none;
 }
 
-.about,.about-footer{
+.about,
+.about-footer {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -354,7 +355,8 @@
     line-height: 120%;
     color: #000000;
 }
-.foto-card:hover .foto-card_text{
+
+.foto-card:hover .foto-card_text {
     padding-left: 10px;
     padding-bottom: 20px;
     text-align: center;
@@ -363,13 +365,13 @@
     transition: .5s;
     background: rgba( 0, 0, 0, 0.3)
 }
-.foto-card:hover .foto-card_img{
+
+.foto-card:hover .foto-card_img {
     text-align: center;
     transform: scale(1.03);
     transition: .8s;
     background: rgba( 0, 0, 0, 0.3)
 }
-
 
 .flowers {
     width: 293px;
@@ -762,7 +764,8 @@
     border: 1.18841px solid #FFFFFF;
     margin-bottom: 68px;
 }
-.logo-text_footer{
+
+.logo-text_footer {
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -774,7 +777,7 @@
 
 .logo-image_footer {
     position: absolute;
-    margin: 23.64px 60.05px 5.79px 7.13px;
+    margin: 24px 60px 6px 8px;
     z-index: 2;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
     z-index: 1;
@@ -845,35 +848,39 @@
     transition: 0.6s;
 }
 
-input.email_input:valid{
-    border:#4B9200 solid 1px;
-    color:#4B9200; 
+input.email_input:valid {
+    border: #4B9200 solid 1px;
+    color: #4B9200;
 }
 
-input.email_input:valid + .email_button{
-    border:black solid 1px;
-    color:black;
+input.email_input:valid+.email_button {
+    border: black solid 1px;
+    color: black;
 }
 
-input.email_input:invalid + .email_button{
-    border:#D31414 solid 1px;
-    color:#D31414;
+input.email_input:invalid+.email_button {
+    border: #D31414 solid 1px;
+    color: #D31414;
 }
-input.email_input:valid + label {
+
+input.email_input:valid+label {
     opacity: 0;
 }
+
 input.email_input:invalid:not(:focus):not(:placeholder-shown) {
-    border:#D31414 solid 1px;
-    color:#D31414;
+    border: #D31414 solid 1px;
+    color: #D31414;
 }
-input.email_input:invalid:not(:focus):not(:placeholder-shown) + label {
+
+input.email_input:invalid:not(:focus):not(:placeholder-shown)+label {
     opacity: 0.5;
 }
-input.email_input:invalid:focus:not(:placeholder-shown) ~ 
-.requirements {
-        max-height: 200px;
-        padding: 0 30px 20px 50px;
-   }
+
+input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
+    max-height: 200px;
+    padding: 0 30px 20px 50px;
+}
+
 .requirements {
     padding: 0 30px 0 50px;
     color: #999;
@@ -883,6 +890,7 @@ input.email_input:invalid:focus:not(:placeholder-shown) ~
     color: red;
     font-style: italic;
 }
+
 .footer-second {
     margin: 371px 32px 50px 0px;
 }
@@ -911,7 +919,8 @@ input.email_input:invalid:focus:not(:placeholder-shown) ~
 .email_form {
     margin-top: 14px;
 }
-.form_footer_email{
+
+.form_footer_email {
     display: flex;
     flex-direction: row;
     align-items: center;
