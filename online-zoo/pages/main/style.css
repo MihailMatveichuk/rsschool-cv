@@ -777,7 +777,7 @@
 
 .logo-image_footer {
     position: absolute;
-    margin: 24px 60px 6px 8px;
+    margin: 23.64px 60.05px 5.79px 7.13px;
     z-index: 2;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
     z-index: 1;
@@ -798,7 +798,6 @@
     text-transform: uppercase;
     color: #FFFFFF;
     border: 0;
-    cursor: pointer;
 }
 
 .footer_social {
@@ -824,28 +823,23 @@
 }
 
 .footer_social_item:active .social-facebook {
-    background-image: url('../../assets/icons/facebook_green.svg');
-    transition: 0.6s;
+    background-image: url('../../assets/icons/facebook_green.svg')
 }
 
 .footer_social_item:active .social-twiter {
     background-image: url('../../assets/icons/twiter_green.svg');
-    transition: 0.6s;
 }
 
 .footer_social_item:active .social-instagram {
     background-image: url('../../assets/icons/instagra_green.svg');
-    transition: 0.6s;
 }
 
 .footer_social_item:active .social-youtube {
     background-image: url('../../assets/icons/youtube_green.svg');
-    transition: 0.6s;
 }
 
 .footer_social_item:active .social-text {
     color: #4B9200;
-    transition: 0.6s;
 }
 
 input.email_input:valid {
@@ -985,6 +979,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
     text-decoration: none;
 }
 
+.about-footer:active,
 .map-footer:active,
 .zoos-footer:active,
 .contact-footer:active {
@@ -992,7 +987,6 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    transition: 0.6s;
 }
 
 .btn_header:hover,
