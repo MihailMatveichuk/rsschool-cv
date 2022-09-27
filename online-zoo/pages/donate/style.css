@@ -1,30 +1,30 @@
 @font-face {
     font-family: 'Roboto';
-    src: url("/online-zoo/assets/fonts/Roboto-Thin.ttf");
+    src: url("../../assets/fonts/Roboto-Thin.ttf");
     font-weight: 100;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("/online-zoo/assets/fonts/Roboto-Light.ttf");
+    src: url("../../assets/fonts/Roboto-Light.ttf");
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("/online-zoo/assets/fonts/Roboto-Regular.ttf");
+    src: url("../../assets/fonts/Roboto-Regular.ttf");
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("/online-zoo/assets/fonts/Roboto-Medium.ttf");
+    src: url("../../assets/fonts/Roboto-Medium.ttf");
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url("/online-zoo/assets/fonts/Roboto-Bold.ttf");
+    src: url("../../assets/fonts/Roboto-Bold.ttf");
     font-weight: 700;
 }
 
@@ -43,7 +43,7 @@
 
 .section1_ft {
     height: 390px;
-    background: url('/online-zoo/assets/images/panda_bg.png');
+    background: url('../../assets/images/panda_bg.png');
 }
 
 .nav {
@@ -338,7 +338,7 @@
 }
 
 .circle {
-    content: url('/online-zoo/assets/icons/dot.svg');
+    content: url('../../assets/icons/dot.svg');
 }
 
 
@@ -387,7 +387,7 @@ input.charity_input:focus::placeholder {
 }
 
 input.charity_input:focus~.charity-form_mark {
-    content: url('/online-zoo/assets/icons/mark_green.svg');
+    content: url('../../assets/icons/mark_green.svg');
 }
 
 input::-webkit-outer-spin-button,
@@ -443,11 +443,11 @@ input::-webkit-inner-spin-button {
 
 .fake {
     margin-right: 10px;
-    content: url('/online-zoo/assets/icons/circle.svg');
+    content: url('../../assets/icons/circle.svg');
 }
 
 .period_checked:checked+.fake {
-    content: url('/online-zoo/assets/icons/circle_green.svg');
+    content: url('../../assets/icons/circle_green.svg');
 }
 
 .pick-feed_content_lower-btn {
@@ -564,19 +564,19 @@ input::-webkit-inner-spin-button {
 }
 
 .footer_social_item:active .social-facebook {
-    background-image: url('/online-zoo/assets/icons/facebook_green.svg')
+    background-image: url('../../assets/icons/facebook_green.svg')
 }
 
 .footer_social_item:active .social-twiter {
-    background-image: url('/online-zoo/assets/icons/twiter_green.svg');
+    background-image: url('../../assets/icons/twiter_green.svg');
 }
 
 .footer_social_item:active .social-instagram {
-    background-image: url('/online-zoo/assets/icons/instagra_green.svg');
+    background-image: url('../../assets/icons/instagra_green.svg');
 }
 
 .footer_social_item:active .social-youtube {
-    background-image: url('/online-zoo/assets/icons/youtube_green.svg');
+    background-image: url('../../assets/icons/youtube_green.svg');
 }
 
 .footer_social_item:active .social-text {
