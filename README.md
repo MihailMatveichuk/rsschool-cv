@@ -1,1 +1,1 @@
-https://mihailmatveichuk.github.io/rsschool-cv/Online zoo/main/index.html
+https://mihailmatveichuk.github.io/rsschool-cv/Online%20zoo/main/index.html
