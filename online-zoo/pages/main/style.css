@@ -63,15 +63,15 @@
 
 .logo {
     width: 82px;
-    height: 52px;
+    /* height: 52px; */
     text-align: center;
-    border: 1.18841px solid #FFFFFF;
+    border: 1.2px solid #FFFFFF;
     margin: 14px 63px 14px 220px;
 }
 
 .logo-image {
     position: absolute;
-    margin: 23.64px 0px 5.79px -28px;
+    margin: 24px 0px 6px -28px;
     z-index: 2;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
     z-index: 1;
@@ -162,12 +162,12 @@
 
 .title {
     position: absolute;
-    width: 500.31px;
-    height: 400px;
+    width: 500px;
+    /* height: 400px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 106.496px;
+    font-size: 107px;
     line-height: 75%;
     text-align: center;
     text-transform: uppercase;
@@ -201,7 +201,7 @@
 
 .section2 {
     width: 1161px;
-    height: 403px;
+    /* height: auto; */
     flex-direction: row;
 }
 
@@ -235,7 +235,7 @@
 
 .section2_title {
     width: 465px;
-    height: 116px;
+    /* height: 116px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -246,7 +246,7 @@
 
 .section2_text-first {
     margin-top: 20px;
-    height: 42px;
+    /* height: 42px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -258,7 +258,7 @@
 .section2_subtitle {
     margin-top: 54px;
     width: 217px;
-    height: 29px;
+    /* height: 29px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -269,7 +269,7 @@
 
 .section2_text-second {
     margin-top: 34px;
-    height: 105px;
+    /* height: 105px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -292,7 +292,7 @@
     grid-gap: 20px 30px;
     justify-content: space-between;
     width: 1158px;
-    height: 872px;
+    /* height: 872px; */
 }
 
 .foto-card {
@@ -307,8 +307,8 @@
 }
 
 .foto-card_img {
-    width: 366px;
-    height: 366px;
+    /* width: 366px; */
+    /* height: 366px; */
 }
 
 .foto-card_logo_meat {
@@ -374,8 +374,8 @@
 }
 
 .flowers {
-    width: 293px;
-    height: 605px;
+    /* width: 293px; */
+    /* height: 605px; */
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-top: -128px;
     margin-left: 20px;
@@ -424,7 +424,7 @@
     background: #FE9013;
     border-radius: 25px;
     width: 298px;
-    height: 54px;
+    /* height: 54px; */
     margin: 78px 283px 100px 359px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -440,8 +440,8 @@
 }
 
 .strelitzia {
-    width: 368px;
-    height: 275px;
+    /* width: 368px; */
+    /* height: 275px; */
     margin-top: -35px;
 }
 
@@ -453,7 +453,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 1004px;
+    /* height: 1004px; */
     background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     opacity: 0.9;
 }
@@ -462,15 +462,15 @@
     display: flex;
     flex-direction: column;
     width: 1160px;
-    height: 835px;
+    /* height: 835px; */
     margin: 69px 220px 100px 220px;
     background: rgba(253, 253, 255, 0.52);
     border-radius: 20px;
 }
 
 .section4_title {
-    width: 467px;
-    height: 58px;
+    /* width: 467px; */
+    /* height: 58px; */
     margin: 41px 347px 30px 350px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -481,8 +481,8 @@
 }
 
 .section4_title_moto {
-    width: 855px;
-    height: 29px;
+    /* width: 855px;
+    height: 29px; */
     margin: 0px 217px 40px 99px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -493,8 +493,8 @@
 }
 
 .section4_title_covid-text {
-    width: 1061px;
-    height: 21px;
+    /* width: 1061px;
+    height: 21px; */
     margin: 0px 0px 10px 99px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -505,8 +505,8 @@
 }
 
 .section4_title_zoo {
-    width: 863px;
-    height: 42px;
+    /* width: 863px;
+    height: 42px; */
     margin: 0px 198px 60px 99px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -543,8 +543,8 @@
 }
 
 .pick-feed_card {
-    width: 168px;
-    height: 244px;
+    /* width: 168px;
+    height: 244px; */
 }
 
 .pick-feed_icon {
@@ -561,8 +561,8 @@
 }
 
 .pick-feed_icon_zoo {
-    width: 85.77px;
-    height: 95px;
+    /* width: 85.77px; */
+    /* height: 95px; */
 }
 
 .pick-feed_icon_monkey {
@@ -579,7 +579,7 @@
 
 .pick-feed_card_text {
     width: 168px;
-    height: 46px;
+    /* height: 46px; */
     margin-top: 30px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -618,8 +618,8 @@
 }
 
 .section5_comment_title {
-    width: 206px;
-    height: 47px;
+    /* width: 206px;
+    height: 47px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -638,12 +638,16 @@
 
 .section5_comment_card {
     box-sizing: border-box;
-    width: 268px;
-    height: 391px;
+    width: calc((100% - 90px) / 4);
+  padding: 2px;
+  border-radius: 20px;
+  background: linear-gradient( to left top, #FEBDAB 35%, #F3A9F8 45%, #E0D8F0 95%, #EAF7FE 100%, #EAF7FE 100%);
+}
+.reviews-item__wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
     border-radius: 20px;
-    border-image-source: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
-    border-image-width: 10px;
-    border: #FEBDAB solid 2px;
     background-color: #F1F3F2;
 }
 
@@ -662,7 +666,7 @@
 }
 
 .header-card_text_title {
-    height: 19px;
+    /* height: 19px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -674,7 +678,7 @@
 .header-card_text_subtitle {
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
-    height: 18px;
+    /* height: 18px; */
     font-weight: 300;
     font-size: 15px;
     line-height: 120%;
@@ -740,7 +744,7 @@
 
 .footer {
     width: 100%;
-    height: 443px;
+    /* height: 443px; */
     background-color: #000000;
     display: flex;
     flex-direction: row;
@@ -759,9 +763,9 @@
 
 .logo_footer {
     width: 82px;
-    height: 52px;
+    /* height: 52px; */
     text-align: center;
-    border: 1.18841px solid #FFFFFF;
+    border: 1.2px solid #FFFFFF;
     margin-bottom: 68px;
 }
 
@@ -777,7 +781,7 @@
 
 .logo-image_footer {
     position: absolute;
-    margin: 23.64px 60.05px 5.79px 7.13px;
+    margin: 24px 60px 6px 7px;
     z-index: 2;
     transform: matrix(-0.9, 0.52, 0.4, 0.88, 0, 0);
     z-index: 1;
@@ -807,7 +811,7 @@
 }
 
 .footer_social_item {
-    height: 26px;
+    /* height: 26px; */
     display: flex;
     flex-direction: row;
     width: 111px;
@@ -901,7 +905,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
 
 .footer_subscibe {
     width: 237px;
-    height: 29px;
+    /* height: 29px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -923,7 +927,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
 
 .email_input {
     width: 228px;
-    height: 42px;
+    /* height: 42px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;

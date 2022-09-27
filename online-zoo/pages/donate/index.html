@@ -23,7 +23,7 @@
             <li><a href="" class="zoos">Zoos</a></li>
             <li><a href="" class="donate">Donate</a></li>
             <li><a href="" class="contact">Contact us</a></li>
-            <li><a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks" class="design">Design by &copy;</a></li>
+            <li><a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks" class="design">Designed by &copy;</a></li>
         </ul>
     </nav>
     <header class="section1_ft">
@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="amount_point">
                                     <label class="amount_item">
-                                        <input type="radio" name="period" class="amount_checked">
+                                        <input type="radio" name="period" class="amount_checked" checked>
                                         <span class="circle"></span>
                                     </label>
                                     <span class="amount_item_text">$1000</span>
@@ -111,27 +111,29 @@
                             </form>
                         </div>
                     </div>
-                    <div class="charity-form">
-                        <input type="number" placeholder="Another amount" class="charity_input" />
-                        <img src="../../assets/icons/mark.svg" alt="Dollar mark" class="charity-form_mark">
-                    </div>
-                    <form class="period">
-                        <label class="period_item">
-                                    <input type="radio" name="period" class="period_checked">
-                                    <span class="fake"></span>
-                                    <span>Monthly</span>
-                                </label>
-                        <label class="period_item">
-                                    <input type="radio" name="period" class="period_checked" checked>
-                                    <span class="fake"></span>
-                                    <span>Once</span>
-                                </label>
-                    </form>
-                    <form action="../../pages/donate/index.html" target="_blank">
-                        <button class="pick-feed_content_lower-btn">Feed a friend now</button>
+                    <form class="charity">
+                        <div class="charity-form">
+                            <input class="charity_input" min="1" max="9999" type="number" name="amount" id="" placeholder="Another amount" required="">
+                            <img src="../../assets/icons/mark.svg" alt="Dollar mark" class="charity-form_mark">
+                        </div>
+                        <di class="period">
+                            <label class="period_item">
+                                <input type="radio" name="period" class="period_checked">
+                                <span class="fake"></span>
+                                <span>Monthly</span>
+                            </label>
+                            <label class="period_item">
+                                <input type="radio" name="period" class="period_checked" checked>
+                                <span class="fake"></span>
+                                <span>Once</span>
+                            </label>
+                        </di>
+                        <form action="../../pages/donate/index.html" target="_blank">
+                            <button class="pick-feed_content_lower-btn">Feed a friend now</button>
+                        </form>
                     </form>
                     <p class="pick-feed_content_last-text">Share with your friends on social networks</p>
-                </div>
+                </а>
             </div>
         </section>
         <footer class="footer">
