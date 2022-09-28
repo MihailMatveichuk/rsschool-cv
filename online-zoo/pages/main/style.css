@@ -36,6 +36,7 @@
 
 .dekstop_petstory {
     width: 1600px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -47,26 +48,52 @@
 }
 
 .nav {
+    width: 1161px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 80px;
     background: #000000;
+}
+
+.nav_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1161px;
+    justify-content: space-between;
 }
 
 .nav_list {
     display: flex;
     flex-direction: row;
+    column-gap: 58px;
     align-items: center;
     color: white;
     list-style-type: none;
 }
 
+.nav_list_left {
+    display: flex;
+    flex-direction: row;
+    width: 87%;
+    align-items: center;
+    column-gap: 63px;
+}
+
+.nav_list_right {
+    display: flex;
+    flex-direction: row;
+    width: 13%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .logo {
-    width: 82px;
-    /* height: 52px; */
+    width: 8.5%;
     text-align: center;
     border: 1.2px solid #FFFFFF;
-    margin: 14px 63px 14px 220px;
 }
 
 .logo-image {
@@ -100,24 +127,24 @@
     pointer-events: none;
 }
 
-.about,
+
+/* .about,
 .map,
 .zoos,
 .donate,
 .contact {
-    margin: 29px 58px 29px 0px;
-}
+    margin: 29px 58px 29px 0px; 
+}  */
 
+.donate:active,
 .map:active,
 .zoos:active,
-.donate:active,
 .contact:active,
 .design:active {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    transition: 0.6s;
 }
 
 .design {
@@ -126,7 +153,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    margin: 29px 220px 29px 380px;
 }
 
 .about,
@@ -639,11 +665,12 @@
 .section5_comment_card {
     box-sizing: border-box;
     width: calc((100% - 90px) / 4);
-  padding: 2px;
-  border-radius: 20px;
-  background: linear-gradient( to left top, #FEBDAB 35%, #F3A9F8 45%, #E0D8F0 95%, #EAF7FE 100%, #EAF7FE 100%);
+    padding: 2px;
+    border-radius: 20px;
+    background: linear-gradient( to left top, #FEBDAB 35%, #F3A9F8 45%, #E0D8F0 95%, #EAF7FE 100%, #EAF7FE 100%);
 }
-.reviews-item__wrapper{
+
+.reviews-item__wrapper {
     width: 100%;
     height: 100%;
     padding: 15px;
@@ -762,8 +789,7 @@
 }
 
 .logo_footer {
-    width: 82px;
-    /* height: 52px; */
+    width: 28%;
     text-align: center;
     border: 1.2px solid #FFFFFF;
     margin-bottom: 68px;
@@ -827,19 +853,23 @@
 }
 
 .footer_social_item:active .social-facebook {
-    background-image: url('../../assets/icons/facebook_green.svg')
+    background-image: url('../../assets/icons/facebook_green.svg');
+    background-repeat: no-repeat;
 }
 
 .footer_social_item:active .social-twiter {
     background-image: url('../../assets/icons/twiter_green.svg');
+    background-repeat: no-repeat;
 }
 
 .footer_social_item:active .social-instagram {
     background-image: url('../../assets/icons/instagra_green.svg');
+    background-repeat: no-repeat;
 }
 
 .footer_social_item:active .social-youtube {
     background-image: url('../../assets/icons/youtube_green.svg');
+    background-repeat: no-repeat;
 }
 
 .footer_social_item:active .social-text {
@@ -849,11 +879,18 @@
 input.email_input:valid {
     border: #4B9200 solid 1px;
     color: #4B9200;
+    outline: #4B9200;
 }
 
 input.email_input:valid+.email_button {
-    border: black solid 1px;
-    color: black;
+    border: #4B9200 solid 1px;
+    color: #4B9200;
+}
+
+input.email_input:invalid {
+    outline: #D31414;
+    border: #D31414 solid 1px;
+    color: #D31414;
 }
 
 input.email_input:invalid+.email_button {
@@ -861,8 +898,15 @@ input.email_input:invalid+.email_button {
     color: #D31414;
 }
 
-input.email_input:valid+label {
-    opacity: 0;
+input.email_input:invalid:not(:focus) {
+    border: #F9804B solid 1px;
+    color: #BDBDBD;
+    ;
+}
+
+input.email_input:invalid:not(:focus)~.email_button {
+    border: #000000 solid 1px;
+    color: #000000;
 }
 
 input.email_input:invalid:not(:focus):not(:placeholder-shown) {
@@ -870,8 +914,9 @@ input.email_input:invalid:not(:focus):not(:placeholder-shown) {
     color: #D31414;
 }
 
-input.email_input:invalid:not(:focus):not(:placeholder-shown)+label {
-    opacity: 0.5;
+input.email_input:invalid:not(:focus):not(:placeholder-shown)~.email_button {
+    border: #D31414 solid 1px;
+    color: #D31414;
 }
 
 input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
