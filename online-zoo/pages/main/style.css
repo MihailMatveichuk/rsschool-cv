@@ -34,17 +34,15 @@
     box-sizing: border-box;
 }
 
-.dekstop_petstory {
-    width: 1600px;
-    height: 100%;
+.container {
+    width: 1161px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .section1_ft {
     height: 780px;
-    background: url('../../assets/images/Giant_Panda.png');
+    background: url('../../assets/images/Giant_Panda.png') no-repeat;
+    background-size: cover;
 }
 
 .nav {
@@ -127,15 +125,6 @@
     pointer-events: none;
 }
 
-
-/* .about,
-.map,
-.zoos,
-.donate,
-.contact {
-    margin: 29px 58px 29px 0px; 
-}  */
-
 .donate:active,
 .map:active,
 .zoos:active,
@@ -170,26 +159,22 @@
     text-decoration: none;
 }
 
-.header_atributes {
+.wrapper_circle {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex-end;
 }
 
 .circle {
     position: absolute;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    width: 465px;
-    height: 465px;
     border-radius: 50%;
-    margin: 12px 328px 223px 807px;
+    margin-top: 12px;
+    margin-left: -105px;
 }
 
 .title {
     position: absolute;
     width: 500px;
-    /* height: 400px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -198,7 +183,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin: 86px 219.69px 214px 880px;
+    margin-top: 86px;
 }
 
 .title_yellow {
@@ -206,7 +191,8 @@
 }
 
 .btn_header {
-    margin-top: 60px;
+    margin-top: 546px;
+    margin-right: 90px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 25px;
     border: 0;
@@ -221,7 +207,6 @@
     vertical-align: middle;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin: 546px 319px 100px 983px;
     cursor: pointer;
 }
 
@@ -244,7 +229,6 @@
     margin: 140px 0px 0px 0px;
 }
 
-
 .section_article {
     display: flex;
     flex-direction: row;
@@ -257,6 +241,11 @@
 
 .section2_text {
     margin-left: 87px;
+}
+
+.section_article::after {
+    content: url("../../assets/images/flower_foto1.png");
+    margin-top: -128px;
 }
 
 .section2_title {
@@ -291,7 +280,6 @@
 
 .section2_text-second {
     margin-top: 34px;
-    /* height: 105px; */
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -340,7 +328,7 @@
 .foto-card_footer {
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     padding: 8px 12px 14px 16px;
 }
 
@@ -380,10 +368,10 @@
     transition: .5s;
     background: rgba( 0, 0, 0, 0.3)
 }
+
 .foto-card:hover.foto-card_text {
     color: white
 }
-
 
 .foto-card:hover .foto-card_img {
     transform: scale(1.03);
@@ -426,18 +414,13 @@
     width: 1600px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-.section3_footer:nth-child(2){
-    margin: 0 auto;
 }
 
 .section3_lower-btn {
     background: #FE9013;
     border-radius: 25px;
     width: 298px;
-    /* height: 54px; */
-    margin: 78px 283px 100px 359px;
+    height: 54px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -446,7 +429,9 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin: 0 auto;
     margin-top: 86px;
+    margin-left: 38%;
     border: 0;
     cursor: pointer;
 }
@@ -470,17 +455,24 @@
 .pick-feed {
     display: flex;
     flex-direction: column;
-    width: 1160px;
-    /* height: 835px; */
-    margin: 69px 220px 100px 220px;
+    align-items: center;
+    margin: 84px auto;
     background: rgba(253, 253, 255, 0.52);
     border-radius: 20px;
 }
 
+.pick_feed_header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9px;
+    margin-top: 26px;
+    margin-bottom: 60px;
+}
+
 .section4_title {
-    /* width: 467px; */
-    /* height: 58px; */
-    margin: 41px 347px 30px 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -490,9 +482,7 @@
 }
 
 .section4_title_moto {
-    /* width: 855px;
-    height: 29px; */
-    margin: 0px 217px 40px 99px;
+    margin-bottom: 40px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -502,9 +492,7 @@
 }
 
 .section4_title_covid-text {
-    /* width: 1061px;
-    height: 21px; */
-    margin: 0px 0px 10px 99px;
+    margin-bottom: 10px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -514,9 +502,7 @@
 }
 
 .section4_title_zoo {
-    /* width: 863px;
-    height: 42px; */
-    margin: 0px 198px 60px 99px;
+    width: 863px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -528,7 +514,7 @@
 .section4_title_subtitle {
     width: 209px;
     height: 47px;
-    margin: 0px 476px 40px 475px;
+    margin-bottom: 40px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -549,16 +535,11 @@
     flex-direction: row;
     justify-content: center;
     justify-items: center;
-}
-
-.pick-feed_card {
-    /* width: 168px;
-    height: 244px; */
+    margin-bottom: 60px;
 }
 
 .pick-feed_icon {
     box-sizing: border-box;
-    width: 168px;
     height: 168px;
     display: flex;
     flex-direction: column;
@@ -569,25 +550,23 @@
     border: orange solid 1px;
 }
 
-.pick-feed_icon_zoo {
-    /* width: 85.77px; */
-    /* height: 95px; */
-}
-
 .pick-feed_icon_monkey {
-    width: 124.75px;
-    height: 71.6px;
+    width: 125px;
+    height: 72px;
 }
 
 .cartoon_arrow {
     width: 69px;
-    height: 168.08px;
+    height: 169px;
     margin-left: 30px;
     margin-right: 31px;
 }
 
-.pick-feed_card_text {
+.pick-feed_card {
     width: 168px;
+}
+
+.pick-feed_card_text {
     margin-top: 30px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -602,7 +581,6 @@
     border-radius: 25px;
     width: 298px;
     height: 54px;
-    margin: 60px 431px 59px 431px;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -613,13 +591,15 @@
     color: #FFFFFF;
     border: 0;
     cursor: pointer;
+    margin-bottom: 74px;
 }
 
 .section5_comments {
     width: 1160px;
     height: 575px;
     background-color: white;
-    margin: 140px 220px 204px 220px;
+    margin-top: 140px;
+    margin-bottom: 204px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -639,8 +619,8 @@
 .section5_comment_cards {
     display: flex;
     flex-direction: row;
-    width: 100%;
     gap: 30px;
+    margin-bottom: 21px;
 }
 
 .section5_comment_card {
@@ -657,7 +637,6 @@
     padding: 15px;
     border-radius: 20px;
     background-color: #F1F3F2;
-
 }
 
 .header-card {
@@ -670,7 +649,6 @@
 .header-card_text {
     display: flex;
     flex-direction: column;
-
 }
 
 .header-card_text_title {
@@ -705,15 +683,16 @@
     box-sizing: border-box;
     width: 599px;
     height: 8px;
+    margin: 0 auto;
+    margin-bottom: 31px;
     background: #F5F7F6;
     border-radius: 5px;
     border: #FEBDAB solid 0.5px;
-    margin: 21px 501px 31px 500px;
     cursor: pointer;
 }
 
 .row_filling {
-    width: 115.19px;
+    width: 25%;
     height: 6px;
     background: #FE9013;
     border-radius: 5px;
@@ -721,7 +700,14 @@
 
 .section5_footer {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section5_footer::after {
+    content: url("../../assets/icons/leav_foto.svg");
+    margin-top: -35px;
+    margin-right: -20%;
 }
 
 .section5_lower-btn {
@@ -738,7 +724,6 @@
     text-transform: uppercase;
     color: #FFFFFF;
     border: 0;
-    margin: 0px 847px 0px 220px;
     cursor: pointer;
 }
 
@@ -753,11 +738,9 @@
     display: flex;
     flex-direction: row;
 }
-.footer_wrapper{
-    width: 1161px;
+
+.footer_wrapper {
     display: flex;
-    flex-direction: row;
-    margin: 0 auto;
     margin-top: 40px;
 }
 
