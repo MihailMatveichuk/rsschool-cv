@@ -40,7 +40,7 @@
 }
 
 .section1_ft {
-    height: 780px;
+    height: 700px;
     background: url('../../assets/images/Giant_Panda.png') no-repeat;
     background-size: cover;
 }
@@ -74,7 +74,6 @@
 .nav_list_left {
     display: flex;
     flex-direction: row;
-    width: 87%;
     align-items: center;
     column-gap: 63px;
 }
@@ -82,13 +81,13 @@
 .nav_list_right {
     display: flex;
     flex-direction: row;
-    width: 13%;
     align-items: center;
     justify-content: flex-end;
 }
 
 .logo {
-    width: 8.5%;
+    width: 82px;
+    height: 52px;
     text-align: center;
     border: 1.2px solid #FFFFFF;
 }
@@ -618,7 +617,7 @@
 .section5_comment_cards {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    justify-content: space-between;
     margin-bottom: 21px;
 }
 
@@ -678,25 +677,43 @@
     color: #767474;
 }
 
-.row {
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+.range-slider {
     width: 599px;
     height: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
     margin: 0 auto;
-    margin-bottom: 31px;
-    background: #F5F7F6;
     border-radius: 5px;
-    border: #FEBDAB solid 0.5px;
-    cursor: pointer;
-}
+    margin-bottom: 31px;
+    background: linear-gradient( 315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54% );
+   }
 
-.row_filling {
+  input[type="range"] {
+    width: 100%;
+    border-radius: 5px;
+    appearance: none;
+    margin: 1px;
+    background:#F5F7F6;
+    }
+
+    input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
     width: 25%;
     height: 6px;
-    background: #FE9013;
-    border-radius: 5px;
+    background-color: #FE9013;
+    border-radius: 5px; 
+    cursor: pointer;
 }
-
+ 
+ 
 .section5_footer {
     display: flex;
     justify-content: space-between;
@@ -755,7 +772,8 @@
 }
 
 .logo_footer {
-    width: 28%;
+    width: 82px;
+    height: 52px;
     text-align: center;
     border: 1.2px solid #FFFFFF;
     margin-bottom: 68px;
