@@ -59,7 +59,6 @@
 .nav_wrapper {
     display: flex;
     flex-direction: row;
-    width: 1161px;
     justify-content: space-between;
 }
 
