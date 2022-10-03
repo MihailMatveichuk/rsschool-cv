@@ -1740,23 +1740,3 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         margin-top: 30px;
     }
 }
-
-/* .row_amount{
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto 0;
-    top: -12px;
-}
-.progress-bar{
-    width: 100%;
-}
-.amount_item_text{
-    position: absolute;
-    top: 41px;
-    left: 13px;
-}
-
-.pick-feed_content {
-    margin: 0px 0px 31px;
-} */
