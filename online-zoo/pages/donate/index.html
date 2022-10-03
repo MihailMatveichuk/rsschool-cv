@@ -30,7 +30,7 @@
                         </ul>
                     </div>
                     <div class="nav_list_right">
-                        <<a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks" class="design">Designed by &copy;</a>
+                        <a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks" class="design">Designed by &copy;</a>
                     </div>
                 </div>
             </div>
@@ -58,13 +58,21 @@
                             </div>
                             <div class="pick-feed_content_panda_right">
                                 <img src="../../assets/icons/x_icon.svg" alt="X" class="pick-feed_content_amount_x">
-                                <img src="../../assets/icons/animals-widget.svg" alt="Panda" class="pick-feed_content_amount_panda_widget">
+                                <picture class="progress_bar_image">
+                                    <source srcset="../../assets/icons/panda-row_320.svg" media="(max-width: 570px)">
+                                    <img src="../../assets/icons/animals-widget.svg" alt="Panda" class="pick-feed_content_amount_panda_widget">
+                                </picture>
+                                <!-- <img src="../../assets/icons/animals-widget.svg" alt="Panda" class="pick-feed_content_amount_panda_widget"> -->
                             </div>
                         </div>
                         <p class="pick-feed_content_text">Amount</p>
                         <div class="progress-bar">
                             <div class="progress-bar_row">
                                 <img src="../../assets/icons/progress_bar.svg" alt="progress bar row" class="progress-bar_img">
+                                <!-- <picture class="progress_bar_image">
+                                    <source srcset="../../assets/icons/progress_bar_640.svg" media="(max-width: 700px)">
+                                    <img src="../../assets/icons/progress_bar.svg" alt="progress bar row">
+                                </picture> -->
                                 <form class="row_amount">
                                     <div class="amount_point">
                                         <label class="amount_item">
@@ -92,7 +100,7 @@
                                         <input type="radio" name="period" class="amount_checked">
                                         <span class="circle"></span>
                                     </label>
-                                        <span class="amount_item_text">$500</span>
+                                        <span class="amount_item_text first">$500</span>
                                     </div>
                                     <div class="amount_point">
                                         <label class="amount_item">
@@ -125,6 +133,7 @@
                                 </form>
                             </div>
                         </div>
+                        <div class="wrapper_charity">
                         <form class="charity">
                             <div class="charity-form">
                                 <input class="charity_input" min="1" max="9999" type="number" name="amount" id="" placeholder="Another amount" required="">
@@ -146,6 +155,7 @@
                                 <button class="pick-feed_content_lower-btn">Feed a friend now</button>
                             </form>
                         </form>
+                    </div>
                         <p class="pick-feed_content_last-text">Share with your friends on social networks</p>
                         </а>
                     </div>
@@ -156,14 +166,46 @@
     <footer class="footer">
         <div class="container">
             <div class="footer_wrapper">
-                <div class="footer-first">
+                <div class="part_first">
                     <div class="logo_footer">
                         <img src="../../assets/icons/bamboo.svg" alt="Logo" class="logo-image_footer">
                         <a href="../main/index.html" class="logo-text_footer">PetStory online</a>
                     </div>
+                    <div class="part_first_email_form-text">
+                        <h3 class="footer_subscibe">Subscribe to our news</h3>
+                        <div class="email_form">
+                            <form id="email" class="form_footer_email">
+                                <input required name="email" type="email" placeholder="Enter your email"
+                                    class="email_input" />
+                                <input type="submit" form="email" value="Submit" class="email_button" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer_social_hide">
+                        <a href="" class="footer_social_item">
+                            <img src="../../assets/icons/facebook.svg" alt="Facebook" class="social-facebook">
+                            <p class="social-text"></p>
+                        </a>
+                        <a href="" class="footer_social_item">
+                            <img src="../../assets/icons/twiter.svg" alt="Twitter" class="social-twiter">
+                            <p class="social-text"></p>
+                        </a>
+                        <a href="" class="footer_social_item">
+                            <img src="../../assets/icons/instagram.svg" alt="Instagram" class="social-instagram">
+                            <p class="social-text"></p>
+                        </a>
+                        <a href="" class="footer_social_item">
+                            <img src="../../assets/icons/youtube.svg" alt="YouTube" class="social-youtube">
+                            <p class="social-text"></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="part_second">
                     <form action="../../pages/donate/index.html" target="_blank">
                         <button class="footer_lower-btn">donate for volunteers</button>
                     </form>
+                </div>
+                <div class="part_third">
                     <div class="footer_social">
                         <a href="" class="footer_social_item">
                             <img src="../../assets/icons/facebook.svg" alt="Facebook" class="social-facebook">
@@ -182,22 +224,13 @@
                             <p class="social-text">YouTube</p>
                         </a>
                     </div>
-                </div>
-                <div class="footer-second">
-                    <ul class="footer_list">
-                        <li><a href="../main/index.html" class="about-footer">About</a></li>
-                        <li><a href="" class="map-footer">Map</a></li>
-                        <li><a href=" " class="zoos-footer">Zoos</a></li>
-                        <li><a href=" " class="contact-footer">Contact us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-third ">
-                    <h3 class="footer_subscibe">Subscribe to our news</h3>
-                    <div class="email_form">
-                        <form id="email" class="form_footer_email">
-                            <input required name="email" type="email" placeholder="Enter your email" class="email_input" />
-                            <input type="submit" form="email" value="Submit" class="email_button" />
-                        </form>
+                    <div class="footer-second">
+                        <ul class="footer_list">
+                            <li><a href="../main/index.html" class="about-footer">About</a></li>
+                            <li><a href="" class="map-footer">Map</a></li>
+                            <li><a href=" " class="zoos-footer">Zoos</a></li>
+                            <li><a href=" " class="contact-footer">Contact us</a></li>
+                        </ul>
                     </div>
                     <div class="footer_design-text">
                         <p>Designed by Alisa Samborskaya</p>
