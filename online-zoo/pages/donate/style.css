@@ -1177,7 +1177,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         }
         .row_amount{
             margin-left: -10px;
-            margin-right: -10px;
+            margin-right: -7px;
             margin-top: -29px
         }
 
@@ -1201,4 +1201,15 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         .main_content_section_pick-feed {
             margin-bottom: 21px;
         }
+        .footer_list{
+            column-gap: 33px;
+        }
+        .pick-feed_content_last-text {
+            font-size: 15px;
+        }
+        .amount_item{
+            width: 35px;
+            padding: 0;
+        }
+
     }
