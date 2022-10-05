@@ -1009,7 +1009,35 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
 .footer_lower-btn:disabled {
     background: #828282;
 }
+@media (max-width: 1300px) {
+    .section3-card {
+        padding-bottom: 140px;
+    }
+    .foto-card:nth-child(5) {
+        display: none;
+    }
 
+    .foto-card:nth-child(6) {
+        display: flex;
+    }
+
+    .buttons {
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .circle_arrow2 {
+        margin-left: 85px;
+    }
+
+    .circle_arrow1 {
+        margin-right: 85px;
+    }
+    .section3_animals_card {
+        grid-gap: 92px 30px;
+    }
+
+}
 @media (max-width: 1100px) {
 
     .section1_ft {
@@ -1527,7 +1555,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
 
 @media (max-width: 571px) {
     .container {
-        width: 95%;
+        max-width: 96%;
     }
 
     .section1_ft {
@@ -1551,7 +1579,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
     }
 
     .btn_header {
-        margin-left: auto;
+        margin-left: -2px;
         margin-top: 241px;
     }
 
@@ -1676,6 +1704,8 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
 
     .section4_lower-btn {
         margin: 0px auto 40px auto;
+        width: 297px;
+
     }
 
     .section5_comments {
@@ -1732,6 +1762,9 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         flex-direction: column-reverse;
         margin-bottom: 20px;
     }
+    .footer_list{
+        gap:33px;
+    }
 
     .footer-second {
         width: 100%;
@@ -1740,23 +1773,3 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         margin-top: 30px;
     }
 }
-
-/* .row_amount{
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto 0;
-    top: -12px;
-}
-.progress-bar{
-    width: 100%;
-}
-.amount_item_text{
-    position: absolute;
-    top: 41px;
-    left: 13px;
-}
-
-.pick-feed_content {
-    margin: 0px 0px 31px;
-} */
