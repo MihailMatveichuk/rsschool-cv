@@ -44,23 +44,123 @@
     background: url('../../assets/images/panda_bg.png') no-repeat;
     background-size: cover;
 }
-
 .nav {
-    display: flex;
-    justify-content: center;
-    height: 80px;
     background: #000000;
 }
-
-.wrapper_nav {
+.wrapper{
+    background-color:#000000;
+}
+.wrapper_nav_burger {
     display: flex;
-    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    height: 329px;
+    padding: 10px 0px 0px 10px;
+    background-color: #fff;
+    display:none;
+
+}
+.nav_list_left_burger{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.nav-first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+
+}
+.burger {
+    z-index: 150;
+    border-radius: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.burger::before, .burger::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #424551;
+    border-radius: 3px;
+}
+.burger span {
+    display: block;
+    width: 15px;
+    height: 2px;
+    background-color: #424551;
+    border-radius: 3px;
+    margin: 4px 0;
+    transform: scale(1);
+}
+
+.overlay {
+    opacity: 0.5;
+}
+
+.burgered{
+    max-width: 100%;
+}
+
+.nav_list_burger {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    color: black;
+    list-style-type: none;
+}
+.nav_list_burger li a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: black;
+    text-decoration: none;
+
+}
+.logo-text_burger{
+    color: orange;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;
+}
+.logo-image_burger {
+    position: absolute;
+    margin: 24px 0px 6px -28px;
+    z-index: 2;
+    transform: matrix(-0.9, 0.52, 0.7, 0.88, 4, -9);
+    z-index: 1;
+}
+.burger_menu{
+    display: none;
+}
+
+
+.logo_burger {
+    width: 66px;
+    height: 42px;
+    text-align: center;
+    border: 1.2px solid orange;
+}
+.nav_wrapper {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 80px;
+
 }
+
 
 .nav_list {
     display: flex;
+    flex-direction: row;
     column-gap: 58px;
     align-items: center;
     color: white;
@@ -97,7 +197,6 @@
 }
 
 .logo-text {
-    font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 19px;
@@ -374,11 +473,12 @@
     height: 40px;
     margin-top: -15px;
     margin-bottom: -15px;
+    transition: all 2s;
 }
 
-.amount_checked:checked~.amount_item_text {
+.amount_checked:checked ~.amount_item_text {
     color: #FE9013;
-    transition: 0.2s;
+
 }
 
 .progress-bar_img {
@@ -910,6 +1010,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+        z-index: 3;
     }
 
     .main_content_section_pick-feed {
@@ -921,11 +1022,43 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
     .container {
         width: 98%;
     }
+    .section1_ft {
+        background: url(../../assets/images/panda_bg_1000.png) no-repeat;
+        background-position: 45% 12px;
+        height: 370px;
+        background-size: cover;
+        position: relative;
+        /* top: 21px; */
+    }
     .nav{
+        position: fixed;
+        width: 100%;
         z-index: 11;
     }
+    .design,
+    .nav_list {
+        display: none;
+    }
+    .nav_wrapper {
+        height: 34px;
+    }
+    .burger_menu{
+        display: unset;
+        cursor:pointer;
+    }
+    .main_content_section {
+        padding-top: 30px;
+       
+    }
+
+    /* .nav_list_right {
+        width: 18px;
+        height: 10px;
+        background: url("../../assets/icons/burger_menu.svg") no-repeat;
+        background-size: cover;
+    } */
     .section_pick-feed_ad{
-        margin-top: 45px;
+        margin-top: 0px;
         font-size: 24px;
     }
     .section_pick-feed_text{
@@ -969,35 +1102,11 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         font-size: 13px;
     }
 
-    .nav {
-        position: fixed;
-        width: 100%;
-        height: 34px;
-    }
-
-    .design,
-    .nav_list {
-        display: none;
-    }
-
-    .nav_list_right {
-        width: 18px;
-        height: 10px;
-        background: url("../../assets/icons/burger_menu.svg") no-repeat;
-        background-size: cover;
-    }
-
-    .section1_ft {
-        background: url("../../assets/images/panda_bg_1000.png") no-repeat;
-        background-position: 45% 12px;
-        height: 370px;
-        background-size: cover;
-        position: relative;
-        top: 21px;
-    }
-
     .amount_point:nth-child(-n+3) {
         display: none;
+    }
+    #first{
+        checked: checked;
     }
 
     .progress-bar {
@@ -1024,6 +1133,7 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
         left: 0px;
     }
 }
+
 
     @media (max-width: 571px) {
         .container {

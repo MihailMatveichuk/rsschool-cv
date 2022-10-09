@@ -13,7 +13,7 @@
     <header>
         <nav class="nav">
             <div class="container">
-                <div class="wrapper_nav">
+                <div class="nav_wrapper">
                     <div class="nav_list_left">
                         <div class="logo">
                             <img src="../../assets/icons/bamboo.svg" alt="Logo" class="logo-image">
@@ -30,12 +30,41 @@
                         </ul>
                     </div>
                     <div class="nav_list_right">
-                        <a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks" class="design">Designed by &copy;</a>
+                        <img src="../../assets/icons/burger_menu.svg" alt="" class="burger_menu">
+                        <a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks"
+                            class="design">Designed by &copy;</a>
+                    </div>
+                </div>
+                <div class="wrapper_nav_burger">            
+                        <div class="nav_list_left_burger">
+                            <div class="nav-first">
+                                <div class="logo_burger">
+                                    <img src="../../assets/icons/bamboo_orange.svg" alt="Logo"
+                                        class="logo-image_burger">
+                                    <a href="../main/index.html" class="main_logo">
+                                        <h1 class="logo-text_burger">PetStory online</h1>
+                                    </a>
+                                </div>
+                                <a href="#" class="burger">
+                                    <span></span>
+                                </a>
+                            </div>
+                            <ul class="nav_list_burger">
+                                <li><a href="../main/index.html" class="about">About</a></li>
+                                <li><a href="" class="map">Map</a></li>
+                                <li><a href="" class="zoos">Zoos</a></li>
+                                <li><a href="" class="donate">Donate</a></li>
+                                <li><a href="" class="contact">Contact us</a></li>
+                                <li><a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks"
+                                        class="design_burger">Designed by &copy;</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+    <div class="wrapper">
     <section class="section1_ft"></section>
     <main class="main_content">
         <section class="main_content_section" id="donate">
@@ -90,7 +119,7 @@
                                     </div>
                                     <div class="amount_point">
                                         <label class="amount_item">
-                                        <input type="radio" name="period" class="amount_checked" checked>
+                                        <input type="radio" name="period" class="amount_checked" id="first">
                                         <span class="circle"></span>
                                     </label>
                                         <span class="amount_item_text">$1000</span>
@@ -111,7 +140,7 @@
                                     </div>
                                     <div class="amount_point">
                                         <label class="amount_item">
-                                        <input type="radio" name="period" class="amount_checked">
+                                        <input type="radio" name="period" class="amount_checked" id="second" checked>
                                         <span class="circle"></span>
                                     </label>
                                         <span class="amount_item_text">$100</span>
@@ -240,6 +269,8 @@
             </div>
         </div>
     </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
