@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         thousand = document.getElementById("first"),
         charity = document.querySelector(".charity_input"),
         hundred = document.getElementById("second");
-        charity.value = 100;
+    charity.value = 100;
 
     // if (document.documentElement.clientWidth <= 816) {
     //     thousand.removeAttribute("checked");
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // });
 
     // Restrict input value to 4 values
-    charity.oninput = function () {
+    charity.oninput = function() {
         this.value = this.value.substr(0, 4);
     };
 
@@ -123,9 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    charity.addEventListener("change", ()=>{
-        amountItemText.forEach((e,i)=>{
-            if(charity.value == e.textContent.slice(1)){
+    charity.addEventListener("change", () => {
+        amountItemText.forEach((e, i) => {
+            if (charity.value == e.textContent.slice(1)) {
                 amountChecked[i].setAttribute("checked", "false");
             }
         });
