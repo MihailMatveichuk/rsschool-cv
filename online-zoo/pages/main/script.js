@@ -237,20 +237,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // make carousel of pets cards
 
-    const fotoCard = document.querySelectorAll(".foto-card"),
-        content = document.querySelectorAll(".section3_animals_card"),
+const   content = document.querySelector(".section3_animals_card"),
         prev = document.getElementById("prev"),
         next = document.getElementById("next");
+        let cardList = content.children;
 
-    prev.addEventListener("click", (e) => {
-        content.forEach(el => {
-
+        prev.addEventListener("click", () => {
+            content.append(cardList[0]);
         });
-        console.log(content);
-        let copycard = e[0];
-
-    });
-
-
-
+        next.addEventListener("click", () => {
+            content.prepend(cardList[cardList.length - 1]);
+        });
 });
