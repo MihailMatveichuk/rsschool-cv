@@ -391,17 +391,14 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px 30px;
     position: relative;
-    animation-name: my-animation;
 }
 
 .carousel {
     position: relative;
-    animation-name: my-animation;
 }
 
 .gallery {
     overflow: hidden;
-    animation-name: my-animation;
 }
 
 .foto-card:nth-child(6) {
@@ -420,7 +417,7 @@
     position: relative;
     padding-bottom: 60px;
     z-index: 5;
-    animation-name: my-animation;
+    animation: my-animation 0.7s ease-in;
 }
 
 .foto-card_footer {
