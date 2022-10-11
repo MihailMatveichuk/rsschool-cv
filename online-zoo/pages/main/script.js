@@ -242,9 +242,22 @@ const   content = document.querySelector(".section3_animals_card"),
         next = document.getElementById("next");
         let cardList = content.children;
 
+        let arr = Array.from(cardList);
+
+        console.log(arr)
+    
+
         prev.addEventListener("click", () => {
             content.append(cardList[0]);
+            
+               arr.forEach((item)=>{
+                item.style.opacity = 0;
+                item.style.opacity = 1;
+                console.log(arr);
+            });
         });
+
+
         next.addEventListener("click", () => {
             content.prepend(cardList[cardList.length - 1]);
         });
