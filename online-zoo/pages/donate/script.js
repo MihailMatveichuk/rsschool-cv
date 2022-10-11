@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Change color of value of amount for charity 
     amountChecked.forEach((e, i) => {
         e.addEventListener("click", () => {
-            e.preventDefault();
             charity.value = amountItemText[i].textContent.slice(1);
         });
     });
