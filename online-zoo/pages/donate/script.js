@@ -147,13 +147,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    charity.addEventListener("input", () => {
+    charity.addEventListener("input", (e) => {
         amountItemText.forEach((e, i) => {
             if (charity.value === e.textContent.slice(1)) {
-                amountChecked[i].setAttribute("checked", "false");
+                console.log(charity.value);
+                console.log(e.textContent.slice(1));
+                amountChecked[i].checked = true;
             } 
             else {
-                amountChecked[i].removeAttribute("checked");
+                amountChecked[i].checked = false;
             }
         });
     });
