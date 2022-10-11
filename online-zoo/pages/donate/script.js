@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         charity = document.querySelector(".charity_input"),
         circle = document.querySelectorAll(".circle"),
         hundred = document.getElementById("second");
-    charity.value = 100;
+        charity.value = 100;
 
     // if (document.documentElement.clientWidth <= 816) {
     //     thousand.removeAttribute("checked");
@@ -112,6 +112,28 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }
     // });
 
+
+    // const box = document.querySelector(".box");
+
+    // box.addEventListener("touchstart", (e) => {
+    //     e.preventDefault();
+
+    //     console.log("Start");
+    //     console.log(e.touches);
+    // });
+
+    // box.addEventListener("touchmove", (e) => {
+    //     e.preventDefault();
+
+    //     console.log(e.targetTouches[0].pageX);
+    // });
+
+    // box.addEventListener("touchend", (e) => {
+    //     e.preventDefault();
+
+    //     console.log("End");
+    // });
+
     // Restrict input value to 4 values
     charity.oninput = function() {
         this.value = this.value.substr(0, 4);
@@ -120,15 +142,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Change color of value of amount for charity 
     amountChecked.forEach((e, i) => {
         e.addEventListener("click", () => {
+            e.preventDefault();
             charity.value = amountItemText[i].textContent.slice(1);
         });
     });
 
-    charity.addEventListener("change", () => {
+    charity.addEventListener("input", () => {
         amountItemText.forEach((e, i) => {
-            if (charity.value == e.textContent.slice(1)) {
+            if (charity.value === e.textContent.slice(1)) {
                 amountChecked[i].setAttribute("checked", "false");
-            } else {
+            } 
+            else {
                 amountChecked[i].removeAttribute("checked");
             }
         });
