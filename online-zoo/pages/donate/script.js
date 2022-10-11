@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         amountItemText = document.querySelectorAll(".amount_item_text"),
         thousand = document.getElementById("first"),
         charity = document.querySelector(".charity_input"),
+        circle = document.querySelectorAll(".circle"),
         hundred = document.getElementById("second");
     charity.value = 100;
 
@@ -127,6 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
         amountItemText.forEach((e, i) => {
             if (charity.value == e.textContent.slice(1)) {
                 amountChecked[i].setAttribute("checked", "false");
+            } else {
+                amountChecked[i].removeAttribute("checked");
             }
         });
     });

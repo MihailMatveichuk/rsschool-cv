@@ -377,10 +377,12 @@
 
 .section3-card {
     padding-bottom: 100px;
+    animation-name: my-animation;
 }
 
 .foto-card_img {
     width: 100%;
+    animation-name: my-animation;
 }
 
 .section3_animals_card {
@@ -389,14 +391,17 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px 30px;
     position: relative;
+    animation-name: my-animation;
 }
 
 .carousel {
     position: relative;
+    animation-name: my-animation;
 }
 
 .gallery {
     overflow: hidden;
+    animation-name: my-animation;
 }
 
 .foto-card:nth-child(6) {
@@ -415,6 +420,7 @@
     position: relative;
     padding-bottom: 60px;
     z-index: 5;
+    animation-name: my-animation;
 }
 
 .foto-card_footer {
@@ -1202,21 +1208,12 @@ input.email_input:invalid:focus:not(:placeholder-shown)~.requirements {
     animation-name: right;
 }
 
-@keyframes left {
-    from {
-        left: 0;
+@keyframes my-animation {
+    0% {
+        opacity: 0;
     }
-    to {
-        left: -100%;
-    }
-}
-
-@keyframes right {
-    from {
-        left: 100%;
-    }
-    to {
-        left: 0;
+    100% {
+        opacity: 1;
     }
 }
 
