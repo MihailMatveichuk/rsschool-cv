@@ -99,14 +99,14 @@ body {
 }
 
 .sound {
-    background: url("high-sound.png") center no-repeat;
+    background: url("/src/high-sound.png") center no-repeat;
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
 .on {
-    background: url("mute-sound.png") center no-repeat;
+    background: url("/src/mute-sound.png") center no-repeat;
 }
 
 .table {
