@@ -1,0 +1,123 @@
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.gem_puzzle {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gem_puzzle-buttons {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    font-size: 15px;
+    height: 22px;
+    color: white;
+    background-color: darkcyan;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.button:nth-child(1),
+.button:nth-child(2),
+.button:nth-child(3) {
+    margin-right: 7px;
+}
+
+.stop {
+    background-color: grey;
+}
+
+.field {
+    width: 316px;
+    height: 316px;
+    margin-top: 10px;
+    position: relative;
+    background-color: lightgray;
+}
+
+.cell {
+    border: black solid 0.1px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    background-color: white;
+    cursor: pointer;
+}
+
+.moves {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.inner_moves {
+    font-size: 22px;
+}
+
+.time_show {
+    font-size: 16px;
+}
+
+.size {
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.other-sizes {
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.other-sizes :nth-child(1),
+.other-sizes :nth-child(2),
+.other-sizes :nth-child(3),
+.other-sizes :nth-child(4),
+.other-sizes :nth-child(5) {
+    margin-right: 3px;
+}
+
+.sound {
+    background: url("src/high-sound.png") center no-repeat;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.on {
+    background: url("src/mute-sound.png") center no-repeat;
+}
+
+.table {
+    position: absolute;
+    z-index: 5;
+    width: 25%;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+    opacity: 1;
+    transition: all 1s;
+}
