@@ -41,6 +41,7 @@ body {
 .header ul li {
     flex: auto;
     text-align: center;
+    border: #222 solid 1px;
 }
 
 .header ul li a {
@@ -54,9 +55,10 @@ body {
     cursor: pointer;
 }
 
-.page-item.active .page-link {
-    background-color: #00bc8c;
-    border-color: #007c5d;
+.page-item:hover,
+.page-link:hover {
+    background-color: #73eecf;
+    border-color: #a2bdb6;
 }
 
 .top-panel {
@@ -71,27 +73,6 @@ body {
     height: 55px;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-.logo-link {
-    cursor: pointer;
-}
-
-hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(175, 169, 169, 0.918);
-}
-
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
-
-.score {
-    line-height: 55px;
 }
 
 .d-flex {
@@ -171,6 +152,7 @@ a {
     margin-bottom: 25px;
     border-radius: 5px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .pagination {
@@ -632,16 +614,6 @@ audio {
     .question__content {
         padding: 0;
     }
-    .row {
-        flex-direction: column;
-    }
-    .col-md-6 {
-        margin-top: 20px;
-        width: 100%;
-    }
-    .btn {
-        width: auto;
-    }
 }
 
 .question__content {
@@ -651,24 +623,4 @@ audio {
 
 .question__audio-player {
     width: 100%;
-}
-
-.error .li-btn {
-    background-color: #d62c1a;
-}
-
-.li-btn {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 15px;
-    border-radius: 50%;
-    -webkit-transition: .1s;
-    transition: .1s;
-}
-
-.item-list .list-group-item:hover,
-.li-btn {
-    background-color: #444;
-    cursor: pointer;
 }
