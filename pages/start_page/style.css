@@ -108,7 +108,8 @@ body {
     border: 0 solid transparent;
 }
 
-a {
+a,
+.year {
     color: #00bc8c;
     text-decoration: none;
     background-color: transparent;
@@ -156,13 +157,18 @@ a {
 }
 
 .pagination {
+    width: 70%;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    /* flex-direction: column; */
     padding-left: 0;
     list-style: none;
     border-radius: 0.25rem;
 }
+
+.main {}
 
 ol,
 ul,
@@ -585,14 +591,6 @@ audio {
     }
 }
 
-
-/* 
-@media screen and (max-width: 576px) {
-    .question {
-        flex-direction: column;
-    }
-} */
-
 .question {
     color: #fff;
     background-color: #4682b4;
@@ -623,4 +621,18 @@ audio {
 
 .question__audio-player {
     width: 100%;
+}
+
+.logo-school {
+    width: 80px;
+    height: 20px;
+    background-color: #20c997;
+    border-radius: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20%;
 }
