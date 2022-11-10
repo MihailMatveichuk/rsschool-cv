@@ -41,6 +41,12 @@ body {
     overflow: hidden;
 }
 
+.top-panel {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
 .header .logo {
     background-image: url("../../assets/icons/logo.svg");
     width: 200px;
