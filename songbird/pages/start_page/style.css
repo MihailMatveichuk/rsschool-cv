@@ -142,19 +142,19 @@ a,
 }
 
 .video {
-    width: 80%;
-    height: 500px;
+    width: 70%;
+    height: 550px;
 }
 
 .logo-school {
-    width: 80px;
-    height: 20px;
+    width: 90px;
+    height: 30px;
     background-color: #20c997;
     border-radius: 5px;
 }
 
 .footer {
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -163,7 +163,6 @@ a,
 
 @media screen and (max-width: 1000px) {
     .video {
-        width: 70%;
         height: 315px;
     }
 }

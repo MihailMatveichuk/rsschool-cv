@@ -51,7 +51,7 @@ body {
 .page-item .page-link {
     background-color: #008966;
     border-color: #007c5d;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .page-item.active .page-link {

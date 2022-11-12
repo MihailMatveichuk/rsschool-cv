@@ -20,7 +20,7 @@
                 <h5>Score: <span class="score">0</span></h5>
             </div>
             <ul class="pagination">
-                <li class="page-item active"><a class="page-link" href="/#">Разминка</a></li>
+                <li class="page-item active "><a class="page-link" href="/#">Разминка</a></li>
                 <li class="page-item"><a class="page-link" href="/#">Воробьиные</a></li>
                 <li class="page-item"><a class="page-link" href="/#">Лесные птицы</a></li>
                 <li class="page-item"><a class="page-link" href="/#">Певчие птицы</a></li>
@@ -30,9 +30,10 @@
         </div>
         <div class="random-bird jumbotron rounded">
             <img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
-            <div class="question__content">
+            <div class="question__content" id="questionContent">
                 <h3 class="question__bird-name">*****</h3>
-                <hr><audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+                <hr>
+                <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
                 src="https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC512582-190604_1087_Grus_tok.mp3" 
                 title="https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC512582-190604_1087_Grus_tok.mp3">
                     <p>Your browser does not support the <code>audio</code> element.</p>
@@ -41,29 +42,29 @@
         </div>
         <div class="row mb2">
             <div class="col-md-6">
-                <ul class="item-list list-group">
+                <ul class="item-list list-group" id="listOfAnswers">
                     <li class="list-group-item">
                         <span class="li-btn">
                         </span>Ворон</li>
                     <li class="list-group-item">
                         <span class="li-btn">                                
-                            </span>Журавль</li>
+                        </span>Журавль</li>
                     <li class="list-group-item">
                         <span class="li-btn">                                    
-                                </span>Ласточка</li>
+                        </span>Ласточка</li>
                     <li class="list-group-item">
                         <span class="li-btn">                                        
-                                    </span>Козодой</li>
+                        </span>Козодой</li>
                     <li class="list-group-item">
                         <span class="li-btn">
-                                        </span>Кукушка</li>
+                        </span>Кукушка</li>
                     <li class="list-group-item">
                         <span class="li-btn">
-                                            </span>Синица</li>
+                        </span>Синица</li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <div class="bird-details card">
+                <div class="bird-details card" id="replyField">
                     <p class="instruction" style="display: block;">
                         <span>Послушайте плеер.</span>
                         <span>Выберите птицу из списка</span>
