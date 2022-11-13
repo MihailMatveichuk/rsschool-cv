@@ -400,7 +400,7 @@ function showAnswerResult(i){
                 </li>
             </ul>
         </div>
-        <span class="bird-description" style="display: flex;">${ birdsData[questionIndex][0].description}</span>
+        <span class="bird-description" style="display: flex;">${ birdsData[questionIndex][i].description}</span>
     </div>`;
 
     FieldOfRightReply.innerHTML = answerField;
