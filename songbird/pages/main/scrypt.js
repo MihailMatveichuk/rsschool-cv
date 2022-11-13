@@ -4,7 +4,7 @@ const birdsData = [
             name: 'Ворон',
             species: 'Corvus corax',
             description: 'Ворон – крупная птица. Длина тела достигает 70 сантиметров, размах крыльев – до полутора метров. Вороны населяют окрестности Тауэра. В Англии бытует поверье, что в день, когда черные вороны улетят от Тауэра, монархия рухнет.',
-            image: 'https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg',
+            image: '../../assets/images/Voron.jpg',
             audio: 'https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3'
         },
         {
@@ -12,7 +12,7 @@ const birdsData = [
             name: 'Журавль',
             species: 'Grus grus',
             description: 'Звуки, издаваемые журавлем, похожи на звонкое «кур-лы – кур-лы». Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», а вторая подхватывает «лы». Если птица поёт одна, то она издает только звук «кур».',
-            image: 'https://live.staticflickr.com/65535/49221158846_b0b69a58f1.jpg',
+            image: '../../assets/images/juravl.jpg',
             audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC512582-190604_1087_Grus_tok.mp3'
         },
         {
@@ -20,7 +20,7 @@ const birdsData = [
             name: 'Ласточка',
             species: 'Delichon urbicum',
             description: 'Для ласточек характерно негромкое щебетание. Песни ласточек не смолкают на протяжении всего лета. Исследователи различают у птиц до 6 щебечущих звуков: «вит», «ви-вит», «чивит», «чиривит» и т.п. Ласточки любят петь дуэтом.',
-            image: 'https://live.staticflickr.com//65535//48539007512_5029d2a9a0.jpg',
+            image: '../../assets/images/lastochka.jpg',
             audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3'
         },
         {
@@ -28,7 +28,7 @@ const birdsData = [
             name: 'Козодой',
             species: 'Caprimulgus europaeus',
             description: 'Козодой – неприметная птица, известная благодаря своему голосу. Песня козодоя звучит как монотонная трель похожая на тарахтение мотоцикла. Такое дребезжание слышно от заката до рассвета, его тональность, частота и громкость изменяются. ',
-            image: 'https://live.staticflickr.com/65535/48456345286_dbc8530027.jpg',
+            image: '../../assets/images/kozodoi.jpg',
             audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC486956-190623_22.37h_nachtzwaluw_rechte%20heide_zang_ad%20_2ex_gezien_.mp3'
         },
         {
@@ -36,7 +36,7 @@ const birdsData = [
             name: 'Кукушка',
             species: 'Cuculus canorus',
             description: 'Кукушку назвали так из-за особенностей ее песен. Звонкое «ку-ку» не спутать ни с какой другой птицей. Кукушки не строят гнезда, их потомство выращивают другие виды пернатых, которым кукушки подбрасывают свои яйца.',
-            image: 'https://live.staticflickr.com/65535/48377838151_e15f430ec1.jpg',
+            image: '../../assets/images/kukushka.jpg',
             audio: 'https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC501461-190616_08.13h_koekoek_brabantse%20biesbosch%20jantjesplaat_roep_1%20ex_ad%20m_ter%20plaatse%20zingend_gezien_.mp3'
         },
         {
@@ -44,7 +44,7 @@ const birdsData = [
             name: 'Синица',
             species: 'Parus major',
             description: 'В щебетании синиц различают более 40 различных звуковых сочетаний. Поют они практически круглый год, немного затихая только зимой. Синицы настоящие санитары леса. Одна пара синиц в период гнездования оберегает от вредителей десятки деревьев.',
-            image: 'https://live.staticflickr.com//65535//49366042493_c48c81d58d.jpg',
+            image: '../../assets/images/sinica.jpg',
             audio: 'https://www.xeno-canto.org/sounds/uploaded/RFGQDPLDEC/XC518417-Kj%C3%B8ttmeis%20XC%20Helg%C3%B8ya%20Elias%20A.%20Ryberg20200108133922_079.mp3'
         }
     ],
@@ -294,12 +294,12 @@ const birdsData = [
         }
     ]
 ];
-
-// Findind needed elements
+window.addEventListener('DOMContentLoaded',()=>{
+    // Findind needed elements
 const headerQuestion = document.querySelector('#questionContent');
 const listOfAnswers = document.querySelector('#listOfAnswers');
-const answersButtons = document.querySelectorAll('.li-btn');
 const FieldOfRightReply = document.querySelector('#replyField');
+const answers = document.querySelectorAll('.list-group-item');
 const buttonNext = document.querySelector('.btn');
 
 // Values of game
@@ -309,18 +309,38 @@ let questionIndex = 0;
 clearPage();
 showQuestion();
 
+
+
 // Clearing the HTML
 function clearPage(){
     headerQuestion.innerHTML = '';
-    // FieldOfRightReply.innerHTML = '';
     listOfAnswers.innerHTML = '';
 }
 
-function showQuestion(){
-    // Question
+function showQuestionOnlyHeader(){
+        // Question
+        const headerQuestionTemplate = 
+        `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
+        <div class="question__content" id="questionContent">
+            <h3 class="question__bird-name">*****</h3>
+            <hr>
+            <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+            src=%audio% 
+            title='audio'>
+                <p>Your browser does not support the <code>audio</code> element.</p>
+            </audio>
+        </div>`;
     
+        let audio = headerQuestionTemplate.replace('%audio%', birdsData[questionIndex][0].audio);
+        headerQuestion.innerHTML = audio;
+} 
+
+function showQuestion(){
+
+    // Question
     const headerQuestionTemplate = 
-    `<div class="question__content" id="questionContent">
+    `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
+    <div class="question__content" id="questionContent">
         <h3 class="question__bird-name">*****</h3>
         <hr>
         <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
@@ -344,10 +364,86 @@ function showQuestion(){
             </span>%answer%</li>`;
         
         const answerHTML =  answersTemplate.replace('%answer%', answerText);  
-        console.log(answerHTML);  
-
         listOfAnswers.innerHTML += answerHTML;
     }   
 }
+
+function changeHeaderQuestionAfterAnswer(){
+    const headerQuestionAfterAnswer = 
+        `<img class="bird-image" src="${birdsData[questionIndex][0].image}" alt="bird">
+        <div class="question__content" id="questionContent">
+            <h3 class="question__bird-name">${birdsData[questionIndex][0].name}</h3>
+            <hr>
+            <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+            src='${birdsData[questionIndex][0].audio}' 
+            title='audio'>
+                <p>Your browser does not support the <code>audio</code> element.</p>
+            </audio>
+        </div>`;
+
+    headerQuestion.innerHTML = headerQuestionAfterAnswer;
+}
+
+function showAnswerResult(i){
+
+    const answerField = `
+    <div class="bird-details card">
+        <div class="card-body" style="display: flex;">
+        <img class="bird-image" src="${birdsData[questionIndex][i].image}" alt="bird">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4>${birdsData[questionIndex][i].name}</h4></li>
+                <li class="list-group-item"><span>${birdsData[questionIndex][i].species}</span></li>
+                <li class="list-group-item">
+                    <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+                    src='${birdsData[questionIndex][i].audio}' title='audio'>
+                    </audio>
+                </li>
+            </ul>
+        </div>
+        <span class="bird-description" style="display: flex;">${ birdsData[questionIndex][0].description}</span>
+    </div>`;
+
+    FieldOfRightReply.innerHTML = answerField;
+
+}
+listOfAnswers.addEventListener('click', (e)=>{
+    let index = 0;
+    let targetName = e.target.textContent.trim();
+    answers.forEach((el, i)=>{
+        let elementName = el.textContent.trim();
+        if(elementName == targetName){
+            index = i;
+        }
+    });
+    if(e.target && e.target.tagName == "LI"){
+        
+        let answerItem =  e.target.innerText;
+        if(answerItem == birdsData[questionIndex][0].name){
+            e.target.childNodes[1].classList.add('right');
+            FieldOfRightReply.innerHTML = '';
+            showAnswerResult(0);
+            headerQuestion.innerHTML = '';
+            changeHeaderQuestionAfterAnswer();
+
+        }
+        else{
+
+            e.target.childNodes[1].classList.add('error');
+            FieldOfRightReply.innerHTML = '';
+            showAnswerResult(index);
+            headerQuestion.innerHTML = '';
+            showQuestionOnlyHeader();
+
+        }
+    }
+    
+});
+// function checkAnswer(answerItem){
+    
+// }
+});
+
+
+
 
 

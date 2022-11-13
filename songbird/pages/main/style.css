@@ -602,14 +602,56 @@ audio {
         max-width: 50%;
     }
 }
+@media (max-width: 767px){
+.bird-details .bird-image {
+    margin-right: 2rem;
+}
+}
+@media (max-width: 992px){
+.bird-details .bird-image {
+    display: block;
+    margin: 0 auto 25px;
+}
+}
+/* @media (max-width: 767px){
+.card-body {
+    flex-direction: row;
+}
+} */
+.card-body {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    min-height: 173px;
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+.bird-details .bird-image {
+    width: 200px;
+    height: 155px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+@media (max-width: 1100px){
+
+    .card-body {
+        flex-direction: column;
+    }
+}
 
 
-/* 
+
 @media screen and (max-width: 576px) {
     .question {
         flex-direction: column;
     }
-} */
+}
 
 .question {
     color: #fff;
@@ -621,14 +663,14 @@ audio {
     display: flex;
 }
 
-@media (max-width: 570px) {
+@media (max-width: 900px) {
     .random-bird {
         flex-direction: column;
         align-items: center;
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 900px) {
     .question__content {
         padding: 0;
     }
@@ -653,10 +695,6 @@ audio {
     width: 100%;
 }
 
-.error .li-btn {
-    background-color: #d62c1a;
-}
-
 .li-btn {
     display: inline-block;
     width: 10px;
@@ -671,4 +709,11 @@ audio {
 .li-btn {
     background-color: #444;
     cursor: pointer;
+}
+.right {
+    background-color: green;
+}
+
+.error {
+    background-color: #d62c1a;
 }
