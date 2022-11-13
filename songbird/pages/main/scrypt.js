@@ -294,6 +294,7 @@ const birdsData = [
         }
     ]
 ];
+
 window.addEventListener('DOMContentLoaded',()=>{
     // Findind needed elements
 const headerQuestion = document.querySelector('#questionContent');
@@ -350,7 +351,7 @@ function showQuestion(){
         </audio>
     </div>`;
 
-    let audio = headerQuestionTemplate.replace('%audio%', birdsData[questionIndex][0].audio);
+    let audio = headerQuestionTemplate.replace('%audio%', birdsData[questionIndex].sort(() => Math.random() - 0.5)[0].audio);
     headerQuestion.innerHTML = audio;
 
     // Types of answers
