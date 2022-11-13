@@ -422,8 +422,11 @@ listOfAnswers.addEventListener('click', (e)=>{
             e.target.childNodes[1].classList.add('right');
             FieldOfRightReply.innerHTML = '';
             showAnswerResult(0);
+            FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/victory.mp3" id="winSound" 
+            autoplay></audio>`;
             headerQuestion.innerHTML = '';
             changeHeaderQuestionAfterAnswer();
+
 
         }
         else{
@@ -431,6 +434,8 @@ listOfAnswers.addEventListener('click', (e)=>{
             e.target.childNodes[1].classList.add('error');
             FieldOfRightReply.innerHTML = '';
             showAnswerResult(index);
+            FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/error.mp3" id="winSound" 
+            autoplay></audio>`;
             headerQuestion.innerHTML = '';
             showQuestionOnlyHeader();
 
