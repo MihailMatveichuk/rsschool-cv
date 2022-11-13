@@ -310,8 +310,6 @@ let questionIndex = 0;
 clearPage();
 showQuestion();
 
-
-
 // Clearing the HTML
 function clearPage(){
     headerQuestion.innerHTML = '';
@@ -427,8 +425,6 @@ listOfAnswers.addEventListener('click', (e)=>{
             autoplay></audio>`;
             headerQuestion.innerHTML = '';
             changeHeaderQuestionAfterAnswer();
-
-
         }
         else{
 
