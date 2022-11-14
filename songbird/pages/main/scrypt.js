@@ -300,15 +300,18 @@ window.addEventListener('DOMContentLoaded',()=>{
 const headerQuestion = document.querySelector('#questionContent');
 const listOfAnswers = document.querySelector('#listOfAnswers');
 const FieldOfRightReply = document.querySelector('#replyField');
-const answers = document.querySelectorAll('.list-group-item');
 const buttonNext = document.querySelector('.btn');
 
 // Values of game
 let score = 0;
 let questionIndex = 0;
+let newBirdsData = birdsData.slice(0)[questionIndex].sort(() => Math.random() - 0.5);
+let birds = Math.floor(Math.random() * 6);
 
 clearPage();
 showQuestion();
+chosenAnswer();
+clickButton();
 
 // Clearing the HTML
 function clearPage(){
@@ -319,19 +322,18 @@ function clearPage(){
 function showQuestionOnlyHeader(){
         // Question
         const headerQuestionTemplate = 
-        `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
-        <div class="question__content" id="questionContent">
-            <h3 class="question__bird-name">*****</h3>
-            <hr>
-            <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
-            src=%audio% 
-            title='audio'>
-                <p>Your browser does not support the <code>audio</code> element.</p>
-            </audio>
-        </div>`;
-    
-        let audio = headerQuestionTemplate.replace('%audio%', birdsData[questionIndex][0].audio);
-        headerQuestion.innerHTML = audio;
+    `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
+    <div class="question__content" id="questionContent" data-id='${newBirdsData[birds].id}'>
+        <h3 class="question__bird-name">*****</h3>
+        <hr>
+        <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+        src=%audio% 
+        title='audio'>
+            <p>Your browser does not support the <code>audio</code> element.</p>
+        </audio>
+    </div>`;
+    let audio = headerQuestionTemplate.replace('%audio%', newBirdsData[birds].audio);
+    headerQuestion.innerHTML = audio;
 } 
 
 function showQuestion(){
@@ -339,7 +341,7 @@ function showQuestion(){
     // Question
     const headerQuestionTemplate = 
     `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
-    <div class="question__content" id="questionContent">
+    <div class="question__content" id="questionContent" data-id='${newBirdsData[birds].id}'>
         <h3 class="question__bird-name">*****</h3>
         <hr>
         <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
@@ -349,16 +351,17 @@ function showQuestion(){
         </audio>
     </div>`;
 
-    let audio = headerQuestionTemplate.replace('%audio%', birdsData[questionIndex].sort(() => Math.random() - 0.5)[0].audio);
+    let audio = headerQuestionTemplate.replace('%audio%', newBirdsData[birds].audio);
     headerQuestion.innerHTML = audio;
 
     // Types of answers
-    const newArr = birdsData[questionIndex];
+    const newArr = newBirdsData;
     for(let i = 0; i<newArr.length; i++){
         let answerText = newArr[i].name;
+        let answerId = newArr[i].id;
 
         const answersTemplate = 
-        `<li class="list-group-item">
+        `<li class="list-group-item" data-id='${answerId}'>
             <span class="li-btn">
             </span>%answer%</li>`;
         
@@ -366,15 +369,16 @@ function showQuestion(){
         listOfAnswers.innerHTML += answerHTML;
     }   
 }
+const answers = document.querySelectorAll('.list-group-item');
 
-function changeHeaderQuestionAfterAnswer(){
+function changeHeaderQuestionAfterAnswer(i){
     const headerQuestionAfterAnswer = 
-        `<img class="bird-image" src="${birdsData[questionIndex][0].image}" alt="bird">
-        <div class="question__content" id="questionContent">
-            <h3 class="question__bird-name">${birdsData[questionIndex][0].name}</h3>
+        `<img class="bird-image" src="${newBirdsData[i].image}" alt="bird">
+        <div class="question__content" id="questionContent" data-id='${newBirdsData[i].id}'>
+            <h3 class="question__bird-name">${newBirdsData[i].name}</h3>
             <hr>
             <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
-            src='${birdsData[questionIndex][0].audio}' 
+            src='${newBirdsData[i].audio}' 
             title='audio'>
                 <p>Your browser does not support the <code>audio</code> element.</p>
             </audio>
@@ -385,64 +389,85 @@ function changeHeaderQuestionAfterAnswer(){
 
 function showAnswerResult(i){
 
-    const answerField = `
-    <div class="bird-details card">
+    const answerField = 
+    `<div class="bird-details card">
         <div class="card-body" style="display: flex;">
-        <img class="bird-image" src="${birdsData[questionIndex][i].image}" alt="bird">
+        <img class="bird-image" src="${newBirdsData[i].image}" alt="bird">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4>${birdsData[questionIndex][i].name}</h4></li>
-                <li class="list-group-item"><span>${birdsData[questionIndex][i].species}</span></li>
+                <li class="list-group-item"><h4>${newBirdsData[i].name}</h4></li>
+                <li class="list-group-item"><span>${newBirdsData[i].species}</span></li>
                 <li class="list-group-item">
                     <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
-                    src='${birdsData[questionIndex][i].audio}' title='audio'>
+                    src='${newBirdsData[i].audio}' title='audio'>
                     </audio>
                 </li>
             </ul>
         </div>
-        <span class="bird-description" style="display: flex;">${ birdsData[questionIndex][i].description}</span>
+        <span class="bird-description" style="display: flex;">${newBirdsData[i].description}</span>
     </div>`;
 
     FieldOfRightReply.innerHTML = answerField;
 
 }
-listOfAnswers.addEventListener('click', (e)=>{
-    let index = 0;
-    let targetName = e.target.textContent.trim();
-    answers.forEach((el, i)=>{
-        let elementName = el.textContent.trim();
-        if(elementName == targetName){
-            index = i;
+
+function chosenAnswer(){
+    listOfAnswers.addEventListener('click', (e)=>{
+        let index = 0;
+        let targetName = e.target.textContent.trim();
+        answers.forEach((el, i)=>{
+            let elementName = el.textContent.trim();
+            if(elementName == targetName){
+                index = i;
+            }
+        });
+        if(e.target && e.target.tagName == "LI"){
+            console.log(e.target.dataset.id, headerQuestion.dataset.id);
+            let newHeader = document.querySelector('.question__content');
+
+            if(e.target.dataset.id === newHeader.dataset.id){
+                e.target.childNodes[1].classList.add('right');
+                FieldOfRightReply.innerHTML = '';
+                showAnswerResult(birds);
+                FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/victory.mp3" id="winSound" 
+                autoplay></audio>`;
+                headerQuestion.innerHTML = '';
+                changeHeaderQuestionAfterAnswer(birds);
+                buttonNext.classList.add('right');
+                score = score + 4;
+            }
+            else{
+                e.target.childNodes[1].classList.add('error');
+                FieldOfRightReply.innerHTML = '';
+                showAnswerResult(index);
+                FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/error.mp3" id="winSound" 
+                autoplay></audio>`;
+                headerQuestion.innerHTML = '';
+                showQuestionOnlyHeader();
+            }
+        } 
+    });
+}
+
+function clickButton(){
+    buttonNext.addEventListener('click', ()=>{
+    if(buttonNext.classList.contains('right')){
+            questionIndex++;
+            buttonNext.classList.remove('right');
+            console.log(questionIndex);
+            headerQuestion.innerHTML = '';
+            listOfAnswers.innerHTML = '';
+            FieldOfRightReply.innerHTML ='';
+            FieldOfRightReply.innerHTML = `
+            <p class="instruction" style="display: block;">
+                <span>Послушайте плеер.</span>
+                <span>Выберите птицу из списка</span>
+            </p>`;
+            showQuestion();
+            chosenAnswer();
         }
     });
-    if(e.target && e.target.tagName == "LI"){
-        
-        let answerItem =  e.target.innerText;
-        if(answerItem == birdsData[questionIndex][0].name){
-            e.target.childNodes[1].classList.add('right');
-            FieldOfRightReply.innerHTML = '';
-            showAnswerResult(0);
-            FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/victory.mp3" id="winSound" 
-            autoplay></audio>`;
-            headerQuestion.innerHTML = '';
-            changeHeaderQuestionAfterAnswer();
-        }
-        else{
+}
 
-            e.target.childNodes[1].classList.add('error');
-            FieldOfRightReply.innerHTML = '';
-            showAnswerResult(index);
-            FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/error.mp3" id="winSound" 
-            autoplay></audio>`;
-            headerQuestion.innerHTML = '';
-            showQuestionOnlyHeader();
-
-        }
-    }
-    
-});
-// function checkAnswer(answerItem){
-    
-// }
 });
 
 
