@@ -321,17 +321,17 @@ function clearPage(){
 
 function showQuestionOnlyHeader(){
         // Question
-        const headerQuestionTemplate = 
-    `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
-    <div class="question__content" id="questionContent" data-id='${newBirdsData[birds].id}'>
-        <h3 class="question__bird-name">*****</h3>
-        <hr>
-        <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
-        src=%audio% 
-        title='audio'>
-            <p>Your browser does not support the <code>audio</code> element.</p>
-        </audio>
-    </div>`;
+    const headerQuestionTemplate = 
+        `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
+        <div class="question__content" id="questionContent" data-id='${newBirdsData[birds].id}'>
+            <h3 class="question__bird-name">*****</h3>
+            <hr>
+            <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+            src=%audio% 
+            title='audio'>
+                <p>Your browser does not support the <code>audio</code> element.</p>
+            </audio>
+        </div>`;
     let audio = headerQuestionTemplate.replace('%audio%', newBirdsData[birds].audio);
     headerQuestion.innerHTML = audio;
 } 
@@ -340,16 +340,16 @@ function showQuestion(){
 
     // Question
     const headerQuestionTemplate = 
-    `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
-    <div class="question__content" id="questionContent" data-id='${newBirdsData[birds].id}'>
-        <h3 class="question__bird-name">*****</h3>
-        <hr>
-        <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
-        src=%audio% 
-        title='audio'>
-            <p>Your browser does not support the <code>audio</code> element.</p>
-        </audio>
-    </div>`;
+        `<img class="bird-image" src="../../assets/images/temple.jpg" alt="bird">
+        <div class="question__content" id="questionContent" data-id='${newBirdsData[birds].id}'>
+            <h3 class="question__bird-name">*****</h3>
+            <hr>
+            <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+            src=%audio% 
+            title='audio'>
+                <p>Your browser does not support the <code>audio</code> element.</p>
+            </audio>
+        </div>`;
 
     let audio = headerQuestionTemplate.replace('%audio%', newBirdsData[birds].audio);
     headerQuestion.innerHTML = audio;
@@ -390,21 +390,21 @@ function changeHeaderQuestionAfterAnswer(i){
 function showAnswerResult(i){
 
     const answerField = 
-    `<div class="bird-details card">
-        <div class="card-body" style="display: flex;">
-        <img class="bird-image" src="${newBirdsData[i].image}" alt="bird">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><h4>${newBirdsData[i].name}</h4></li>
-                <li class="list-group-item"><span>${newBirdsData[i].species}</span></li>
-                <li class="list-group-item">
-                    <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
-                    src='${newBirdsData[i].audio}' title='audio'>
-                    </audio>
-                </li>
-            </ul>
-        </div>
-        <span class="bird-description" style="display: flex;">${newBirdsData[i].description}</span>
-    </div>`;
+        `<div class="bird-details card">
+            <div class="card-body" style="display: flex;">
+            <img class="bird-image" src="${newBirdsData[i].image}" alt="bird">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><h4>${newBirdsData[i].name}</h4></li>
+                    <li class="list-group-item"><span>${newBirdsData[i].species}</span></li>
+                    <li class="list-group-item">
+                        <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
+                        src='${newBirdsData[i].audio}' title='audio'>
+                        </audio>
+                    </li>
+                </ul>
+            </div>
+            <span class="bird-description" style="display: flex;">${newBirdsData[i].description}</span>
+        </div>`;
 
     FieldOfRightReply.innerHTML = answerField;
 
