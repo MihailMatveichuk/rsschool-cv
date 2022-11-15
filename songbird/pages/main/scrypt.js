@@ -301,6 +301,8 @@ const headerQuestion = document.querySelector('#questionContent');
 const listOfAnswers = document.querySelector('#listOfAnswers');
 const FieldOfRightReply = document.querySelector('#replyField');
 const buttonNext = document.querySelector('.btn');
+const pagination = document.querySelector('.pagination'); 
+const pageItem = document.querySelectorAll('.page-item');
 
 // Values of game
 let score = 0;
@@ -421,7 +423,6 @@ function chosenAnswer(){
             }
         });
         if(e.target && e.target.tagName == "LI"){
-            console.log(e.target.dataset.id, headerQuestion.dataset.id);
             let newHeader = document.querySelector('.question__content');
 
             if(e.target.dataset.id === newHeader.dataset.id){
@@ -453,7 +454,6 @@ function clickButton(){
     if(buttonNext.classList.contains('right')){
             questionIndex++;
             buttonNext.classList.remove('right');
-            console.log(questionIndex);
             headerQuestion.innerHTML = '';
             listOfAnswers.innerHTML = '';
             FieldOfRightReply.innerHTML ='';
@@ -464,13 +464,29 @@ function clickButton(){
             </p>`;
             showQuestion();
             chosenAnswer();
+            changeActiveInHeeader();
         }
     });
 }
 
+function changeActiveInHeeader(){
+
+    for(let i = 0; i < pageItem.length; i++){
+        if(pageItem[i] !== pageItem[pageItem.length - 1]){
+            if(pageItem[i].classList.contains('active')){
+                pageItem[i].classList.remove('active');
+                pageItem[i + 1].classList.add('active');
+                return;
+            } 
+        }
+        else{
+            pageItem[i].classList.remove('active');
+            pageItem[0].classList.add('active');
+        }
+
+    }
+}
 });
-
-
 
 
 
