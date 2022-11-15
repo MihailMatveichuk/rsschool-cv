@@ -303,9 +303,11 @@ const FieldOfRightReply = document.querySelector('#replyField');
 const buttonNext = document.querySelector('.btn');
 const pagination = document.querySelector('.pagination'); 
 const pageItem = document.querySelectorAll('.page-item');
+const scoreItem = document.querySelector('.score');
 
 // Values of game
 let score = 0;
+let count = 0;
 let questionIndex = 0;
 let newBirdsData = birdsData.slice(0)[questionIndex].sort(() => Math.random() - 0.5);
 let birds = Math.floor(Math.random() * 6);
@@ -414,6 +416,7 @@ function showAnswerResult(i){
 
 function chosenAnswer(){
     listOfAnswers.addEventListener('click', (e)=>{
+        ++count;
         let index = 0;
         let targetName = e.target.textContent.trim();
         answers.forEach((el, i)=>{
@@ -426,6 +429,7 @@ function chosenAnswer(){
             let newHeader = document.querySelector('.question__content');
 
             if(e.target.dataset.id === newHeader.dataset.id){
+
                 e.target.childNodes[1].classList.add('right');
                 FieldOfRightReply.innerHTML = '';
                 showAnswerResult(birds);
@@ -434,7 +438,6 @@ function chosenAnswer(){
                 headerQuestion.innerHTML = '';
                 changeHeaderQuestionAfterAnswer(birds);
                 buttonNext.classList.add('right');
-                score = score + 4;
             }
             else{
                 e.target.childNodes[1].classList.add('error');
@@ -454,6 +457,7 @@ function clickButton(){
     if(buttonNext.classList.contains('right')){
             questionIndex++;
             buttonNext.classList.remove('right');
+            changeActiveInHeeader();
             headerQuestion.innerHTML = '';
             listOfAnswers.innerHTML = '';
             FieldOfRightReply.innerHTML ='';
@@ -463,12 +467,20 @@ function clickButton(){
                 <span>Выберите птицу из списка</span>
             </p>`;
             showQuestion();
-            chosenAnswer();
-            changeActiveInHeeader();
+            if(count==1){
+                score = score + 5;
+                count = 0;
+            }else{
+                score = score + 2;
+                count = 0;
+            }
+            // chosenAnswer();
+            scoreItem.textContent = `${score}`;
+
         }
     });
 }
-
+// Switching paginator's item by click on next level button
 function changeActiveInHeeader(){
 
     for(let i = 0; i < pageItem.length; i++){
@@ -486,6 +498,7 @@ function changeActiveInHeeader(){
 
     }
 }
+
 });
 
 
