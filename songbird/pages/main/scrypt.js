@@ -301,12 +301,12 @@ const headerQuestion = document.querySelector('#questionContent');
 const listOfAnswers = document.querySelector('#listOfAnswers');
 const FieldOfRightReply = document.querySelector('#replyField');
 const buttonNext = document.querySelector('.btn');
-const pagination = document.querySelector('.pagination'); 
 const pageItem = document.querySelectorAll('.page-item');
 const scoreItem = document.querySelector('.score');
 
 // Values of game
 let score = 0;
+
 let count = 0;
 let questionIndex = 0;
 let newBirdsData = birdsData.slice(0)[questionIndex].sort(() => Math.random() - 0.5);
@@ -373,7 +373,47 @@ function showQuestion(){
         listOfAnswers.innerHTML += answerHTML;
     }   
 }
-const answers = document.querySelectorAll('.list-group-item');
+
+function chosenAnswer(){
+    const answers = document.querySelectorAll('.list-group-item');
+    listOfAnswers.addEventListener('click', (e)=>{
+        count++;
+        let index = 0;
+        let targetName = e.target.textContent.trim();
+        answers.forEach((el, i)=>{
+            let elementName = el.textContent.trim();
+            if(elementName == targetName){
+                index = i;
+                // console.log(elementName, targetName);
+            }
+        });
+        if(e.target && e.target.tagName == "LI"){
+            let newHeader = document.querySelector('.question__content');
+
+            if(e.target.dataset.id === newHeader.dataset.id){
+
+                e.target.childNodes[1].classList.add('right');
+                FieldOfRightReply.innerHTML = '';
+                showAnswerResult(birds);
+                FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/victory.mp3" id="winSound" 
+                autoplay></audio>`;
+                headerQuestion.innerHTML = '';
+                changeHeaderQuestionAfterAnswer(birds);
+                buttonNext.classList.add('right');
+            }
+            else{
+                // console.log(index);
+                e.target.childNodes[1].classList.add('error');
+                FieldOfRightReply.innerHTML = '';
+                showAnswerResult(index);
+                FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/error.mp3" id="winSound" 
+                autoplay></audio>`;
+                headerQuestion.innerHTML = '';
+                showQuestionOnlyHeader();
+            }
+        } 
+    });
+}
 
 function changeHeaderQuestionAfterAnswer(i){
     const headerQuestionAfterAnswer = 
@@ -414,50 +454,11 @@ function showAnswerResult(i){
 
 }
 
-function chosenAnswer(){
-    listOfAnswers.addEventListener('click', (e)=>{
-        ++count;
-        let index = 0;
-        let targetName = e.target.textContent.trim();
-        answers.forEach((el, i)=>{
-            let elementName = el.textContent.trim();
-            if(elementName == targetName){
-                index = i;
-            }
-        });
-        if(e.target && e.target.tagName == "LI"){
-            let newHeader = document.querySelector('.question__content');
-
-            if(e.target.dataset.id === newHeader.dataset.id){
-
-                e.target.childNodes[1].classList.add('right');
-                FieldOfRightReply.innerHTML = '';
-                showAnswerResult(birds);
-                FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/victory.mp3" id="winSound" 
-                autoplay></audio>`;
-                headerQuestion.innerHTML = '';
-                changeHeaderQuestionAfterAnswer(birds);
-                buttonNext.classList.add('right');
-            }
-            else{
-                e.target.childNodes[1].classList.add('error');
-                FieldOfRightReply.innerHTML = '';
-                showAnswerResult(index);
-                FieldOfRightReply.innerHTML += `<audio src="../../assets/sounds/error.mp3" id="winSound" 
-                autoplay></audio>`;
-                headerQuestion.innerHTML = '';
-                showQuestionOnlyHeader();
-            }
-        } 
-    });
-}
-
 function clickButton(){
     buttonNext.addEventListener('click', ()=>{
     if(buttonNext.classList.contains('right')){
-            questionIndex++;
+            questionIndex = questionIndex + 1;
             buttonNext.classList.remove('right');
-            changeActiveInHeeader();
             headerQuestion.innerHTML = '';
             listOfAnswers.innerHTML = '';
             FieldOfRightReply.innerHTML ='';
@@ -466,22 +467,29 @@ function clickButton(){
                 <span>Послушайте плеер.</span>
                 <span>Выберите птицу из списка</span>
             </p>`;
+            newBirdsData = birdsData.slice(0)[questionIndex].sort(() => Math.random() - 0.5);
+            birds = Math.floor(Math.random() * 6);
+            changeActiveInHeader();
+            showQuestionOnlyHeader();
             showQuestion();
-            if(count==1){
+            chosenAnswer();
+
+            if(count <= 1){
                 score = score + 5;
                 count = 0;
             }else{
                 score = score + 2;
                 count = 0;
             }
-            // chosenAnswer();
+            
             scoreItem.textContent = `${score}`;
 
         }
     });
 }
+
 // Switching paginator's item by click on next level button
-function changeActiveInHeeader(){
+function changeActiveInHeader(){
 
     for(let i = 0; i < pageItem.length; i++){
         if(pageItem[i] !== pageItem[pageItem.length - 1]){
