@@ -655,11 +655,13 @@ audio {
 }
 .right {
     background-color: green;
+    transition: all 1s;
     
 }
 
 .error {
     background-color: #d62c1a;
+    transition: all 1s;
 }
 
 @media (max-width: 1120px){

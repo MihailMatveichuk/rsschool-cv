@@ -378,6 +378,7 @@ function chosenAnswer(){
     const answers = document.querySelectorAll('.list-group-item');
     listOfAnswers.addEventListener('click', (e)=>{
         count++;
+        console.log(count);
         let index = 0;
         let targetName = e.target.textContent.trim();
         answers.forEach((el, i)=>{
@@ -472,14 +473,17 @@ function clickButton(){
             changeActiveInHeader();
             showQuestionOnlyHeader();
             showQuestion();
+
             chosenAnswer();
 
             if(count <= 1){
                 score = score + 5;
-                count = 0;
+                // count = 0;
+                count = -1;
             }else{
                 score = score + 2;
-                count = 0;
+                // count = 0;
+                count = -1;
             }
             
             scoreItem.textContent = `${score}`;
