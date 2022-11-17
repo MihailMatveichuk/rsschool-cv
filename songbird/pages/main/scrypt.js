@@ -307,8 +307,8 @@ const root = document.querySelector('#root');
 
 // Values of game
 let score = 0;
-
 let count = 0;
+let newCount = 0;
 let questionIndex = 0;
 let newBirdsData = birdsData.slice(0)[questionIndex].sort(() => Math.random() - 0.5);
 let birds = Math.floor(Math.random() * 6);
@@ -379,7 +379,7 @@ function chosenAnswer(){
     const answers = document.querySelectorAll('.list-group-item');
     listOfAnswers.addEventListener('click', (e)=>{
         count++;
-        console.log(count);
+        // console.log(count);
         let index = 0;
         let targetName = e.target.textContent.trim();
         answers.forEach((el, i)=>{
@@ -402,6 +402,7 @@ function chosenAnswer(){
                 headerQuestion.innerHTML = '';
                 changeHeaderQuestionAfterAnswer(birds);
                 buttonNext.classList.add('right');
+                newCount = count;
             }
             else{
                 // console.log(index);
@@ -479,7 +480,7 @@ function clickButton(){
     
                 chosenAnswer();
     
-                if(count <= 1){
+                if(newCount <= 1){
                     score = score + 5;
                     // count = 0;
                     count = -1;
