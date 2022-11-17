@@ -303,6 +303,7 @@ const FieldOfRightReply = document.querySelector('#replyField');
 const buttonNext = document.querySelector('.btn');
 const pageItem = document.querySelectorAll('.page-item');
 const scoreItem = document.querySelector('.score');
+const root = document.querySelector('#root');
 
 // Values of game
 let score = 0;
@@ -457,40 +458,84 @@ function showAnswerResult(i){
 
 function clickButton(){
     buttonNext.addEventListener('click', ()=>{
-    if(buttonNext.classList.contains('right')){
-            questionIndex = questionIndex + 1;
-            buttonNext.classList.remove('right');
-            headerQuestion.innerHTML = '';
-            listOfAnswers.innerHTML = '';
-            FieldOfRightReply.innerHTML ='';
-            FieldOfRightReply.innerHTML = `
-            <p class="instruction" style="display: block;">
-                <span>Послушайте плеер.</span>
-                <span>Выберите птицу из списка</span>
-            </p>`;
-            newBirdsData = birdsData.slice(0)[questionIndex].sort(() => Math.random() - 0.5);
-            birds = Math.floor(Math.random() * 6);
-            changeActiveInHeader();
-            showQuestionOnlyHeader();
-            showQuestion();
-
-            chosenAnswer();
-
-            if(count <= 1){
-                score = score + 5;
-                // count = 0;
-                count = -1;
-            }else{
-                score = score + 2;
-                // count = 0;
-                count = -1;
+        
+            if(buttonNext.classList.contains('right')){
+                if(questionIndex !== birdsData.length - 1){
+                questionIndex = questionIndex + 1;
+                buttonNext.classList.remove('right');
+                headerQuestion.innerHTML = '';
+                listOfAnswers.innerHTML = '';
+                FieldOfRightReply.innerHTML ='';
+                FieldOfRightReply.innerHTML = `
+                <p class="instruction text-center" style="display: block;">
+                    <span>Послушайте плеер.</span>
+                    <span>Выберите птицу из списка</span>
+                </p>`;
+                newBirdsData = birdsData.slice(0)[questionIndex].sort(() => Math.random() - 0.5);
+                birds = Math.floor(Math.random() * 6);
+                changeActiveInHeader();
+                showQuestionOnlyHeader();
+                showQuestion();
+    
+                chosenAnswer();
+    
+                if(count <= 1){
+                    score = score + 5;
+                    // count = 0;
+                    count = -1;
+                }else{
+                    score = score + 2;
+                    // count = 0;
+                    count = -1;
+                }
+                
+                scoreItem.textContent = `${score}`;
+    
             }
-            
-            scoreItem.textContent = `${score}`;
-
+            else{
+                root.innerHTML = '';
+                showScoreResult();
+                const startButton = document.getElementById('start-button');
+                startButton.onclick = ()=>location.reload();
+            }
         }
     });
 }
+
+function showScoreResult(){
+    let title = '';
+    let description = `Вы набрали ${score} баллов из ${birdsData.length * 5}!`;
+        if(score == birdsData.length * 5){
+            title = "Вы набрали максимальное количество баллов &#128079";
+        } else if((score * 100 / birdsData.length / 5) > 50){    
+            title = "Отличный результат вы набрали более половины правильных ответов &#128077";
+        } else {
+            title = "В следующий раз все обязательно получится &#128521";
+        }
+        root.innerHTML = `
+            <div class="header d-flex">
+            <div class="top-panel d-flex">
+                <a class="logo-link" href="../start_page/index.html">
+                    <div class="logo"></div>
+                </a>
+                <h5>Score: <span class="score">${score}</span></h5>
+            </div>
+            <ul class="pagination">
+                <li class="page-item active "><a class="page-link" href="/#">Разминка</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Воробьиные</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Лесные птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Певчие птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Хищные птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Морские птицы</a></li>
+            </ul>
+        </div>
+        <div class="jumbotron game-over">
+            <h1 class="display-3 text-center">Поздравляем!</h1>
+            <p class="lead text-center">${description}</p>
+            <p class="lead text-center">${title}</p>
+        </div>
+        <button class="btn right" id="start-button">Попробовать еще !</button>`;   
+    } 
 
 // Switching paginator's item by click on next level button
 function changeActiveInHeader(){

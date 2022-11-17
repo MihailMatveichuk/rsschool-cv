@@ -656,12 +656,19 @@ audio {
 .right {
     background-color: green;
     transition: all 1s;
-    
 }
+.text-center{
+    text-align: center;
+}
+
 
 .error {
     background-color: #d62c1a;
     transition: all 1s;
+}
+
+#start-button{
+    margin: auto;
 }
 
 @media (max-width: 1120px){
@@ -697,6 +704,9 @@ audio {
     .btn {
         width: auto;
     }
+    #start-button{
+        width: 100%;
+    }
 }
 
 
@@ -709,11 +719,11 @@ audio {
     }
 }
 
-@media (max-width: 767px){
+/* @media (max-width: 767px){
 .bird-details .bird-image {
     margin-right: 2rem;
 }
-}
+} */
 
 @media screen and (max-width: 576px) {
     .question {
