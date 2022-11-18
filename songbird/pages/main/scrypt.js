@@ -318,6 +318,7 @@ showQuestion();
 chosenAnswer();
 clickButton();
 
+
 // Clearing the HTML
 function clearPage(){
     headerQuestion.innerHTML = '';
@@ -333,7 +334,7 @@ function showQuestionOnlyHeader(){
             <hr>
             <audio class="react-audio-player question__audio-player" controls="" id="" preload="metadata" 
             src=%audio% 
-            title='audio'>
+            title='audio' autoplay>
                 <p>Your browser does not support the <code>audio</code> element.</p>
             </audio>
         </div>`;
@@ -375,18 +376,16 @@ function showQuestion(){
     }   
 }
 
+
 function chosenAnswer(){
     const answers = document.querySelectorAll('.list-group-item');
     listOfAnswers.addEventListener('click', (e)=>{
-        count++;
-        // console.log(count);
         let index = 0;
         let targetName = e.target.textContent.trim();
         answers.forEach((el, i)=>{
             let elementName = el.textContent.trim();
             if(elementName == targetName){
                 index = i;
-                // console.log(elementName, targetName);
             }
         });
         if(e.target && e.target.tagName == "LI"){
@@ -402,7 +401,7 @@ function chosenAnswer(){
                 headerQuestion.innerHTML = '';
                 changeHeaderQuestionAfterAnswer(birds);
                 buttonNext.classList.add('right');
-                newCount = count;
+
             }
             else{
                 // console.log(index);
@@ -417,6 +416,38 @@ function chosenAnswer(){
         } 
     });
 }
+function evaluationOfClick(){
+    listOfAnswers.addEventListener('click', (e)=>{
+        count++;
+        console.log(count);
+        if(e.target.childNodes[1].classList.contains('right')){
+            newCount = count;
+            switch(newCount) {
+                case 1: 
+                  score += 5;
+                  break;
+                  case 2: 
+                  score += 4;
+                  break;
+                  case 3: 
+                  score += 3;
+                  break;
+                  case 4: 
+                  score += 2;
+                  break;
+                  case 5: 
+                  score += 1;
+                  break;
+                default:
+                  score += 0;
+                  break;
+              }
+            scoreItem.textContent = `${score}`;
+        }
+    });
+    
+}
+evaluationOfClick();
 
 function changeHeaderQuestionAfterAnswer(i){
     const headerQuestionAfterAnswer = 
@@ -477,27 +508,14 @@ function clickButton(){
                 changeActiveInHeader();
                 showQuestionOnlyHeader();
                 showQuestion();
-    
                 chosenAnswer();
-    
-                if(newCount <= 1){
-                    score = score + 5;
-                    // count = 0;
-                    count = -1;
-                }else{
-                    score = score + 2;
-                    // count = 0;
-                    count = -1;
-                }
-                
-                scoreItem.textContent = `${score}`;
-    
+                count = 0;  
             }
             else{
                 root.innerHTML = '';
                 showScoreResult();
-                const startButton = document.getElementById('start-button');
-                startButton.onclick = ()=>location.reload();
+                // const startButton = document.getElementById('start-button');
+                // startButton.onclick = ()=>location.reload();
             }
         }
     });
@@ -506,12 +524,20 @@ function clickButton(){
 function showScoreResult(){
     let title = '';
     let description = `Вы набрали ${score} баллов из ${birdsData.length * 5}!`;
+    let button = '';
+    let hrefLink = '';
         if(score == birdsData.length * 5){
             title = "Вы набрали максимальное количество баллов &#128079";
+            button = 'Закончить игру!';
+            hrefLink = '../start_page/index.html';
         } else if((score * 100 / birdsData.length / 5) > 50){    
             title = "Отличный результат вы набрали более половины правильных ответов &#128077";
+            button = 'Попробовать еще!';
+            hrefLink = '../main/index.html';
         } else {
             title = "В следующий раз все обязательно получится &#128521";
+            button = 'Попробовать еще!';
+            hrefLink = '../main/index.html';
         }
         root.innerHTML = `
             <div class="header d-flex">
@@ -529,19 +555,21 @@ function showScoreResult(){
                 <li class="page-item"><a class="page-link" href="/#">Хищные птицы</a></li>
                 <li class="page-item"><a class="page-link" href="/#">Морские птицы</a></li>
             </ul>
-        </div>
-        <div class="jumbotron game-over">
-            <h1 class="display-3 text-center">Поздравляем!</h1>
-            <p class="lead text-center">${description}</p>
-            <p class="lead text-center">${title}</p>
-        </div>
-        <button class="btn right" id="start-button">Попробовать еще !</button>`;   
+            </div>
+            <div class="jumbotron game-over">
+                <h1 class="display-3 text-center">Поздравляем!</h1>
+                <p class="lead text-center">${description}</p>
+                <p class="lead text-center">${title}</p>
+            </div>
+            <form action=${hrefLink}>
+                <button class="btn right" id="start-button">${button}</button>
+            </form>`;   
     } 
 
 // Switching paginator's item by click on next level button
 function changeActiveInHeader(){
 
-    for(let i = 0; i < pageItem.length; i++){
+    for(let i = 0; i < pageItem.length - 1; i++){
         if(pageItem[i] !== pageItem[pageItem.length - 1]){
             if(pageItem[i].classList.contains('active')){
                 pageItem[i].classList.remove('active');
