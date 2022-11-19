@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songbird</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="../main/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root" class="container">
+        <div class="header d-flex">
+            <div class="top-panel d-flex">
+                <a class="logo-link" href="../start_page/index.html">
+                    <div class="logo"></div>
+                </a>
+                <h5>Score: <span class="score">0</span></h5>
+            </div>
+            <ul class="pagination">
+                <li class="page-item active "><a class="page-link" href="/#">Разминка</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Воробьиные</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Лесные птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Певчие птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Хищные птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Морские птицы</a></li>
+            </ul>
+        </div>
+        <div class="random-bird jumbotron rounded" id="questionContent">
+        </div>
+        <div class="row mb2">
+            <div class="col-md-6">
+                <ul class="item-list list-group" id="listOfAnswers">
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="bird-details card" id="replyField">
+                    <p class="instruction text-center" style="display: block;">
+                        <span >Послушайте плеер.</span>
+                        <span>Выберите птицу из списка</span>
+                    </p>
+                </div>
+            </div>
+            <button class="btn">Next Level</button>
+        </div>
+        <audio src="../../assets/sounds/victory.mp3" id="winSound"></audio>
+        <audio src="../../assets/sounds/error.mp3" id="errorSound"></audio>
+    </div>
+    <script src="../main/scrypt.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songbird</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="../count_page/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="root" class="container">
+        <div class="header d-flex">
+            <div class="top-panel d-flex">
+                <a class="logo-link" href="../start_page/index.html">
+                    <div class="logo"></div>
+                </a>
+                <h5>Score: <span class="score">0</span></h5>
+            </div>
+            <ul class="pagination">
+                <li class="page-item active"><a class="page-link" href="/#">Разминка</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Воробьиные</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Лесные птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Певчие птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Хищные птицы</a></li>
+                <li class="page-item"><a class="page-link" href="/#">Морские птицы</a></li>
+            </ul>
+        </div>
+        <div class="jumbotron game-over">
+            <h1 class="display-3 text-center">Поздравляем!</h1>
+            <p class="lead text-center">Вы прошли викторину и набрали 16 из 30 возможных баллов</p>
+            <hr class="my-4">
+            <button class="btn btn-next btn-game-over">Попробовать еще раз!</button>
+        </div>
+    </div>
+    <script src="../count_page/scrypt.js"></script>
+</body>
+
+</html>
