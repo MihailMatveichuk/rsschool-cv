@@ -295,4 +295,14 @@ const birdsData = [
     ]
 ];
 
-export default birdsData;
+// Findind needed elements
+const headerQuestion = document.querySelector('#questionContent');
+const listOfAnswers = document.querySelector('#listOfAnswers');
+const answersButtons = document.querySelectorAll('.li-btn');
+const FieldOfRightReply = document.querySelector('#replyField');
+const buttonNext = document.querySelector('.btn');
+
+// Values of game
+let score = 0;
+let questionIndex = 0;
+console.log(birdsData[questionIndex].forEach(item => item));
