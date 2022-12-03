@@ -1,4 +1,6 @@
 class Loader {
+    endpoint: URL;
+    
     constructor(baseLink, options) {
         this.baseLink = baseLink;
         this.options = options;
@@ -23,7 +25,7 @@ class Loader {
         return res;
     }
 
-    makeUrl(options, endpoint) {
+    makeUrl(options, endpoint:) {
         const urlOptions = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
