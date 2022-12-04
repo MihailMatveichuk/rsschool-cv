@@ -1,5 +1,4 @@
 class Loader {
-    endpoint: URL;
     
     constructor(baseLink, options) {
         this.baseLink = baseLink;
