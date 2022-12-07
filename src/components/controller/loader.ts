@@ -1,5 +1,16 @@
+import {cbFunc} from './controller';
+
+type urlString = {
+    endpoint: string;
+    options?: {
+        sources: string;
+    };
+};
+
 class Loader {
-    constructor(baseLink, options) {
+    readonly options: {apiKey: string};
+    readonly baseLink: string;
+    constructor(baseLink: string, options: {apiKey: string}) {
         this.baseLink = baseLink;
         this.options = options;
     }
