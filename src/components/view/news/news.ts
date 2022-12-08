@@ -1,5 +1,5 @@
 import './news.css';
-import type {IArticle} from '../../../types';
+import type { IArticle } from '../../../types';
 
 class News {
     draw(data: IArticle[]) {
@@ -22,7 +22,6 @@ class News {
                 .split('-')
                 .reverse()
                 .join('-');
-
             (newsClone.querySelector('.news__description-title') as HTMLDivElement).textContent = item.title;
             (newsClone.querySelector('.news__description-source') as HTMLDivElement).textContent = item.source.name;
             (newsClone.querySelector('.news__description-content') as HTMLDivElement).textContent = item.description;

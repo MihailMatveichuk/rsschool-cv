@@ -4,32 +4,36 @@ export type urlString = {
         sources: string;
     };
 };
+
 export type cbFunc<T> = (data: T) => void;
+
+export enum HttpReq{
+    GET = 'GET',
+    POST = 'POST',
+    PUT = 'PUT',
+    HEAD = 'HEAD',
+    OPTION = 'OPTION',
+    DELETE = 'DELETE'
+}
 
 export interface ISource {
     id: string;
     name: string;
-    [key: string]: string;
+}
+export interface ISourceRes {
+    sources: ISource[];
 }
 
 export interface IArticle {
     source: ISource;
     author: string;
+    publishedAt: string;
     title: string;
     description: string;
     url: string;
     urlToImage: string;
-    publishedAt: string;
-    content: string;
-}
-
-export interface ISourceRes {
-    status: string;
-    sources: ISource[];
 }
 
 export interface IArticleRes {
-    status: string;
-    totalResults: number;
     articles: IArticle[];
 }

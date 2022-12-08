@@ -8,20 +8,20 @@ class AppController extends AppLoader {
             {
                 endpoint: 'sources',
             },
-            callback,
+            callback
         );
     }
 
-    getNews(e: Event, callback: cbFunc<IArticleRes>) {
-        let target = e.target as HTMLElement;
-        const newsContainer = e.currentTarget as HTMLElement;
+    getNews(e: MouseEvent, callback: cbFunc<IArticleRes>) {
+        let target = e.target as HTMLDivElement;
+        const newsContainer = e.currentTarget as HTMLDivElement;
 
         while (target !== newsContainer) {
             if (target.classList.contains('source__item')) {
                 const sourceId = target.getAttribute('data-source-id') as string;
-                if (newsContainer.getAttribute('data-source') !== sourceId) {
+                if (newsContainer.getAttribute('data-source') as string !== sourceId) {
                     newsContainer.setAttribute('data-source', sourceId);
-                    super.getResp(
+                    super.getResp<IArticleRes>(
                         {
                             endpoint: 'everything',
                             options: {
@@ -33,7 +33,7 @@ class AppController extends AppLoader {
                 }
                 return;
             }
-            target = target.parentNode as HTMLElement;
+            target = target.parentNode as HTMLDivElement;
         }
     }
 }
