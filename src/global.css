@@ -19,21 +19,48 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
 footer .copyright {
     font-size: 14px;
     color: #333;
     text-align: center;
 }
+
 footer .copyright a {
     color: #444;
 }
+
 footer .copyright a:hover {
     color: #555;
 }
+
 footer .copyright:before {
     content: '©';
 }
+
+.footer__container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__rs-school-link svg,
+.footer__github-link svg {
+    fill: rgb(47, 18, 133)
+}
+
+.footer__rs-school-link svg:hover,
+.footer__github-link svg:hover {
+    fill: rgb(67, 11, 170)
+}
+
+.footer__rs-school-link path,
+.footer__github-link path {
+    transition: fill linear 0.25s;
+}
+
 @media (max-width: 769px) {
+
     .main__container {
         grid-template-rows: calc(100vh - 126px);
     }
@@ -45,27 +72,28 @@ footer .copyright:before {
     .copyright {
         font-size: 15px;
     }
+
 }
 
 @media (max-width: 541px) {
+
     h1 {
         font-size: 20px;
     }
+
     .main__container {
         grid-template-rows: calc(100vh - 102px);
     }
 
-    .footer__container {
-        justify-content: space-between;
-    }
-
-    .footer__rsschool-link svg,
+    .footer__rs-school-link svg,
     .footer__github-link svg {
         height: 30px;
     }
+
     .copyright {
         font-size: 10px;
         gap: 5px;
         flex-direction: column;
     }
+
 }

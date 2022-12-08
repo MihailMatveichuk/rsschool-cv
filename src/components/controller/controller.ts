@@ -1,9 +1,6 @@
 import AppLoader from './appLoader';
 import { ISourceRes, IArticleRes, cbFunc } from '../../types';
 
-
-
-
 class AppController extends AppLoader {
 
     getSources(callback: cbFunc<ISourceRes>) {
@@ -11,7 +8,7 @@ class AppController extends AppLoader {
             {
                 endpoint: 'sources',
             },
-            callback
+            callback,
         );
     }
 
@@ -24,7 +21,7 @@ class AppController extends AppLoader {
                 const sourceId = target.getAttribute('data-source-id') as string;
                 if (newsContainer.getAttribute('data-source') !== sourceId) {
                     newsContainer.setAttribute('data-source', sourceId);
-                    super.getResp<IArticleRes>(
+                    super.getResp(
                         {
                             endpoint: 'everything',
                             options: {
