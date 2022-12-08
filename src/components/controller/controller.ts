@@ -1,29 +1,13 @@
 import AppLoader from './appLoader';
-export interface ISourceResponse {
-    id: string;
-    name: string;
-    [key: string]: string;
-    status: string;
-}
-export interface IArticleResponse {
-    articles: any;
-    source: ISourceResponse;
-    totalResults: number;
-    author: string;
-    title: string;
-    description: string;
-    url: string;
-    urlToImage: string;
-    publishedAt: string;
-    content: string;
-}
+import { ISourceRes, IArticleRes, cbFunc } from '../../types';
 
-export type cbFunc<T> = (data: T) => void;
+
 
 
 class AppController extends AppLoader {
-    getSources(callback: cbFunc<ISourceResponse>) {
-        super.getResp<ISourceResponse>(
+
+    getSources(callback: cbFunc<ISourceRes>) {
+        super.getResp<ISourceRes>(
             {
                 endpoint: 'sources',
             },
@@ -31,7 +15,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: Event, callback: cbFunc<IArticleResponse>) {
+    getNews(e: Event, callback: cbFunc<IArticleRes>) {
         let target = e.target as HTMLElement;
         const newsContainer = e.currentTarget as HTMLElement;
 
@@ -40,7 +24,7 @@ class AppController extends AppLoader {
                 const sourceId = target.getAttribute('data-source-id') as string;
                 if (newsContainer.getAttribute('data-source') !== sourceId) {
                     newsContainer.setAttribute('data-source', sourceId);
-                    super.getResp<ISourceResponse>(
+                    super.getResp<IArticleRes>(
                         {
                             endpoint: 'everything',
                             options: {

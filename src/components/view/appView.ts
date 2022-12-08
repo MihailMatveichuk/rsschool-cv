@@ -1,21 +1,22 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import {ISourceResponse, IArticleResponse} from '../controller/controller';
+import type {IArticleRes, ISourceRes} from '../../types';
 
 export class AppView {
     news: News;
     sources: Sources;
+
     constructor() {
         this.news = new News();
         this.sources = new Sources();
     }
 
-    drawNews(data: IArticleResponse) {
+    drawNews(data: IArticleRes) {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
-    drawSources(data:ISourceResponse) {
+    drawSources(data: ISourceRes) {
         const values = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
