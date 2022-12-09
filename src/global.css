@@ -21,21 +21,27 @@ footer {
 }
 
 footer .copyright {
-    font-size: 14px;
+    font-size: 17px;
     color: #333;
     text-align: center;
 }
 
 footer .copyright a {
     color: #444;
+    transition: color linear 0.25s;
+    text-decoration: none;
 }
 
 footer .copyright a:hover {
-    color: #555;
+    color: rgb(173, 172, 172);
 }
 
 footer .copyright:before {
     content: '©';
+}
+footer .copyright::after {
+    content: '2022';
+    margin-left: 10px;
 }
 
 .footer__container{
@@ -70,7 +76,7 @@ footer .copyright:before {
     }
     
     .copyright {
-        font-size: 15px;
+        font-size: 14px;
     }
 
 }
@@ -90,8 +96,8 @@ footer .copyright:before {
         height: 30px;
     }
 
-    .copyright {
-        font-size: 10px;
+    footer .copyright {
+        font-size: 12px;
         gap: 5px;
         flex-direction: column;
     }

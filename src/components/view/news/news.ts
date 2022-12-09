@@ -30,8 +30,8 @@ class News {
             fragment.append(newsClone);
         });
 
-        (document.querySelector('.news') as HTMLDivElement ).innerHTML = '';
-        (document.querySelector('.news') as HTMLTemplateElement).appendChild(fragment);
+        (<HTMLDivElement>document.querySelector('.news')).innerHTML = '';
+        (<HTMLTemplateElement>document.querySelector('.news')).appendChild(fragment);
     }
 }
 

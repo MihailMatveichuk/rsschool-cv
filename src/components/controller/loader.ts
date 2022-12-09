@@ -2,7 +2,7 @@ import { urlString, cbFunc, HttpReq } from "../../types";
 
 
 class Loader {
-    private baseLink: string;
+    readonly baseLink: string;
     private options: { apiKey: string };
     
     constructor(baseLink: string, options: { apiKey: string }) {
@@ -36,7 +36,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load<T>(method: string, endpoint: string, callback: cbFunc<T>, options: { sources?: string }): void {
+    load<T>(method: string, endpoint: string, callback: cbFunc<T>, options: { sources?: string }) {
         fetch(this.makeUrl(options, endpoint), { method })
             .then((res: Response) => this.errorHandler(res))
             .then((res: Response) => res.json())

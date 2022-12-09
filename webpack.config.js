@@ -6,6 +6,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const baseConfig = {
     entry: path.resolve(__dirname, './src/index.ts'),
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'index.js',
+    },
     mode: 'development',
     module: {
         rules: [
@@ -23,10 +27,6 @@ const baseConfig = {
     },
     resolve: {
         extensions: ['.js', '.ts'],
-    },
-    output: {
-        filename: 'index.js',
-        path: path.resolve(__dirname, '../dist'),
     },
     plugins: [
         new HtmlWebpackPlugin({
