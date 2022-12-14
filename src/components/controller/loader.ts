@@ -1,4 +1,4 @@
-import { UrlString, CbFunc, HttpReq } from "../../types";
+import { UrlString, CbFunc, HttpReq, HttpMistakes } from "../../types";
 
 
 class Loader {
@@ -17,7 +17,7 @@ class Loader {
     errorHandler(res: Response): Response | never {
 
         if (!res.ok) {
-            if (res.status === 401 || res.status === 404)
+            if (res.status === HttpMistakes.mistake401 || res.status === HttpMistakes.mistake404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
         }
