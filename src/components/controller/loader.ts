@@ -38,10 +38,10 @@ class Loader {
 
     load<T>(method: string, endpoint: string, callback: CbFunc<T>, options: { sources?: string }) {
         fetch(this.makeUrl(options, endpoint), { method })
-            .then((res: Response) => this.errorHandler(res))
-            .then((res: Response) => res.json())
-            .then((data: T) => callback(data))
-            .catch((err: Error) => console.error(err));
+            .then((res) => this.errorHandler(res))
+            .then((res) => res.json())
+            .then((data) => callback(data))
+            .catch((err) => console.error(err));
     }
 }
 
