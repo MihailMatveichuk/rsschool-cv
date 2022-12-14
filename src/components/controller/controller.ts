@@ -13,8 +13,8 @@ class AppController extends AppLoader {
     }
 
     getNews(e: MouseEvent, callback: cbFunc<IArticleRes>) {
-        let target = <HTMLDivElement>e.target;
-        const newsContainer = <HTMLDivElement>e.currentTarget;
+        let target = e.target as HTMLDivElement;
+        const newsContainer = e.currentTarget as HTMLDivElement;
 
         while (target !== newsContainer) {
             if (target.classList.contains('source__item')) {
@@ -33,7 +33,7 @@ class AppController extends AppLoader {
                 }
                 return;
             }
-            target = <HTMLDivElement>target.parentNode;
+            target = target.parentNode as HTMLDivElement;
         }
     }
 }
