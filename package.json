@@ -7,10 +7,6 @@
     "build": "webpack --config ./webpack.config.js --env mode=prod",
     "lint": "eslint . --ext .ts"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "keywords": [],
   "author": "Aleh Serhiyenia",
   "license": "ISC",
