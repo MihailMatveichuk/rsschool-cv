@@ -1,0 +1,105 @@
+body {
+    color: #fff;
+    background: #17181c;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 10px 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .copyright {
+    font-size: 17px;
+    color: #333;
+    text-align: center;
+}
+
+footer .copyright a {
+    color: #444;
+    transition: color linear 0.25s;
+    text-decoration: none;
+}
+
+footer .copyright a:hover {
+    color: rgb(173, 172, 172);
+}
+
+footer .copyright:before {
+    content: '©';
+}
+footer .copyright::after {
+    content: '2022';
+    margin-left: 10px;
+}
+
+.footer__container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__rs-school-link svg,
+.footer__github-link svg {
+    fill: rgb(47, 18, 133)
+}
+
+.footer__rs-school-link svg:hover,
+.footer__github-link svg:hover {
+    fill: rgb(67, 11, 170)
+}
+
+.footer__rs-school-link path,
+.footer__github-link path {
+    transition: fill linear 0.25s;
+}
+
+@media (max-width: 769px) {
+
+    .main__container {
+        grid-template-rows: calc(100vh - 126px);
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+    
+    .copyright {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 541px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .main__container {
+        grid-template-rows: calc(100vh - 102px);
+    }
+
+    .footer__rs-school-link svg,
+    .footer__github-link svg {
+        height: 30px;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+        gap: 5px;
+        flex-direction: column;
+    }
+
+}
