@@ -1,4 +1,4 @@
-import { UrlString, CbFunc, HttpReq, HttpMistakes } from "../../types";
+import { UrlString, CbFunc, HttpReq, HttpMistakes } from '../../types';
 
 
 class Loader {
