@@ -1,11 +1,11 @@
-export type urlString = {
+export type UrlString = {
     endpoint: string;
     options?: {
         sources: string;
     };
 };
 
-export type cbFunc<T> = (data: T) => void;
+export type CbFunc<T> = (data: T) => void;
 
 export enum HttpReq{
     GET = 'GET',

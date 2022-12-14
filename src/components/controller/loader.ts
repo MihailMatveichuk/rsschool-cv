@@ -1,4 +1,4 @@
-import { urlString, cbFunc, HttpReq } from "../../types";
+import { UrlString, CbFunc, HttpReq } from "../../types";
 
 
 class Loader {
@@ -10,7 +10,7 @@ class Loader {
         this.options = options;
     }
 
-    getResp<T>(url: urlString, callback: cbFunc<T>) {
+    getResp<T>(url: UrlString, callback: CbFunc<T>) {
         this.load(HttpReq.GET, url.endpoint, callback, url.options ?? {});
     }
 
@@ -36,7 +36,7 @@ class Loader {
         return url.slice(0, -1);
     }
 
-    load<T>(method: string, endpoint: string, callback: cbFunc<T>, options: { sources?: string }) {
+    load<T>(method: string, endpoint: string, callback: CbFunc<T>, options: { sources?: string }) {
         fetch(this.makeUrl(options, endpoint), { method })
             .then((res: Response) => this.errorHandler(res))
             .then((res: Response) => res.json())

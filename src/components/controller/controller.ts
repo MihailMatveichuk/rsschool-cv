@@ -1,9 +1,9 @@
 import AppLoader from './appLoader';
-import { ISourceRes, IArticleRes, cbFunc } from '../../types';
+import { ISourceRes, IArticleRes, CbFunc } from '../../types';
 
 class AppController extends AppLoader {
 
-    getSources(callback: cbFunc<ISourceRes>) {
+    getSources(callback: CbFunc<ISourceRes>) {
         super.getResp<ISourceRes>(
             {
                 endpoint: 'sources',
@@ -12,7 +12,7 @@ class AppController extends AppLoader {
         );
     }
 
-    getNews(e: MouseEvent, callback: cbFunc<IArticleRes>) {
+    getNews(e: MouseEvent, callback: CbFunc<IArticleRes>) {
         let target = e.target as HTMLDivElement;
         const newsContainer = e.currentTarget as HTMLDivElement;
 
