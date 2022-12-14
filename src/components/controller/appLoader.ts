@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+
 import Loader from './loader';
 
 class AppLoader extends Loader {
