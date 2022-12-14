@@ -3,19 +3,17 @@ import type { IArticle } from '../../../types';
 
 class News {
     draw(data: IArticle[]) {
-        const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment = document.createDocumentFragment();
         const newsItemTemp = document.querySelector('#newsItemTemp') as HTMLTemplateElement;
 
-        news.forEach((item, idx: number) => {
+        data.forEach((item, index) => {
             const newsClone = newsItemTemp.content.cloneNode(true) as HTMLDivElement;
 
-            if (idx % 2) (newsClone.querySelector('.news__item') as HTMLDivElement).classList.add('alt');
+            if (index % 2) (newsClone.querySelector('.news__item') as HTMLDivElement).classList.add('alt');
 
-            (newsClone.querySelector('.news__meta-photo') as HTMLDivElement).style.backgroundImage = `url(${
-                item.urlToImage || 'img/news_placeholder.jpg'
-            })`;
+            (newsClone.querySelector('.news__meta-photo') as HTMLDivElement).style.backgroundImage = 
+                                     `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
             (newsClone.querySelector('.news__meta-author') as HTMLDivElement).textContent = item.author || item.source.name;
             (newsClone.querySelector('.news__meta-date') as HTMLDivElement).textContent = item.publishedAt
                 .slice(0, 10)
